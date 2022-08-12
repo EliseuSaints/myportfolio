@@ -9,23 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="./css/normalize.css">
 <link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" media="screen and (max-width:768px)" href="./css/mobile.css">
     <title>IT Solutions</title>
 </head>
-<body>
+<body> <!--PARTE DE CIMA DO SITE COM AS OPCOES DO MENU-->
     <nav id="navbar">
         <div id="navbar-container">
             <h1 class="logo">IT Solutions</h1>
+            <button onclick="abrirmenu"></button>
             <ul id="navbar-items">
-                <li>Sobre Mim</li>
-                <li>Projetos</li>
-                <li>Habilidades</li>
-                <li>Certificados</li>
-                <li>Contatos</li>
+                <li><a href="#showcase">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#features">Habilidades</a></li>
+                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#footer">Contatos</a></li>
             </ul>
         </div>
-    </nav>
-
-    <header class="showcase">
+    </nav>  
+                <!--PRIMERA PARTE DO SITE-->
+    <header id="showcase">
         <div id="showcase-container">
             <h2>Sobre Mim</h2>
             <p>Sou um Desenvolvedor Junior em formação, estudo <br>  atualmente as tecnologias HTML5,CSS3 e JavaScript <br>com o objetivo de tornoar um Desenvolvedor Full-Stack.<br></p>
@@ -33,6 +35,7 @@
 <a href="" class="btn">saiba mais</a>
         </div>
     </header>
+                <!--SEGUNDA PARTE DO SITE-->
 
     <section id="projetos">
         <div class="headline"><h2>Meus Projetos</h2></div>
@@ -43,7 +46,8 @@
             <img src="./img/construindocomputador.icon.png" class="obras" >
         </div>
     </section>
-
+         
+                  <!--TERCEIRAPARTE DO SITE-->
     <section id="features">
         <div class="headline"><h2>Habilidades</h2></div>
         <div id="features-container">
@@ -53,7 +57,28 @@
                 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EliseuSaints&layout=compact&langs_count=7&theme=dracula" class="linguagens">
               </div> 
         </div>
+        <div class="skills-wrapper">
+            <div class="skill">
+                <div class="content">
+                    <span>61.98%</span><span>HTML5</span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="content">
+                    <span>38.02%</span><span>CSS3</span>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="content">
+                    <span>10%</span><span>JAVASCRIPT</span>
+                </div>
+            </div>
+
+        </div>
     </section>
+                    <!--QUARTA PARTE DO SITE-->
 
     <section id="certificados">
         <div class="headline"><h2>Certificados</h2></div>
@@ -77,5 +102,6 @@
             <p>GitHub</p>
         </div>
     </footer>
+    <script></script>
 </body>
 </html>

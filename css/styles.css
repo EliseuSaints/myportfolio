@@ -1,4 +1,4 @@
-* {
+* {          /*RESETA TODO A ESTRUTURA DA PAGIAN WEB*/
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -9,25 +9,26 @@ body {
 }
 
 
-
-.btn {
+    
+.btn {                    /*RESPONSAVEL PELO BOTÃO EM BAIXO DO TEXTO SOBRE MIM*/
     display: inline-block;
     padding: 15px 60px;
     font-size: 1.1rem;
     text-transform: uppercase;
     background: black;
-    color: blue;
+    color: white;
     border-radius: 5px;
     transition: background 500ms ease;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
-.btn:hover {
+.btn:hover {               /*RESPONSAVEL PELO BOTÃO EM BAIXO DO TEXTO SOBRE MIM*/
     cursor: pointer;
-    background: red;
+    background: silver;
 }
 .headline {
     font-size: 2.2rem;
@@ -37,13 +38,15 @@ a {
     padding-bottom: 50px;
     letter-spacing: 2px;
 }
-                       /*NAVBAR*/
+                       /*RESPONSAVEL PELO NAVBAR*/
 #navbar {
     width: 100%;
     background: black;
-    color: aqua;
+    color: white;
+    height: 80px;
+    position: fixed;
 }
-
+                        /*RESPONSAVEL PELO CONTEÚDO DO  NAVBAR*/
 #navbar-container {
     width: 80%;
     height: 100%;
@@ -53,18 +56,18 @@ a {
     align-items: center;
 }
 
-#navbar-items {
+#navbar-items {             /*RESPONSAVEL PELO NAVBAR*/
     display: flex;
     list-style: none;
     text-transform: uppercase;
 }
 
-#navbar-items li {
-    padding: 12px;
+#navbar-items li {             /*RESPONSAVEL PELO NAVBAR*/
+    padding: 15px;
 }
-                     /*SHOWCASE*/
-.showcase {
-    height: 95vh;
+                     /*SHOWCASE PRIMEIRA PARTE DO SITE*/
+#showcase {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,7 +78,7 @@ a {
     background-blend-mode: color;
 }
 
-.showcase-container {
+.showcase-container {                /*SHOWCASE PRIMEIRA PARTE DO SITE*/
     text-align: center;
 }
 
@@ -88,40 +91,65 @@ p {
     padding-bottom: 7px 0;
 }
 
-#projetos {
+#projetos {                /*SECTION SEGUNDA PARTE DO SITE*/
     width: 100%;
-    background: greenyellow;
-    color: aqua;
+    background: #eee;
+    color: black;
     padding: 50px;
 }
-.projetos-container {
+.projetos-container {           /* RESPONSAVEL PELO CONTEUDO DO SECTION SEGUNDA PARTE DO SITE*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center ;
     padding: 15px;
 }
 
-.obras {
+.obras {                 /* RESPONSAVEL PELAS IMAGENS DO SECTION SEGUNDA PARTE DO SITE*/
     display: inline-block;
     width: 60%;
 }
 
-#features {
+#features {                            /* RESPONSAVEL PELO CONTEUDO DO SECTION TERCEIRA PARTE DO SITE*/
     width: 100%;
     background: rgb(133, 133, 64);
     color: red;
     padding: 10px;
 }
-#features-container {
+#features-container {                       /* RESPONSAVEL PELO CONTEUDO DO SECTION TERCEIRA PARTE DO SITE*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center ;
-    padding: 10px;
+    padding: 60px;
 }
-.linguagens {
+.linguagens {                            /* RESPONSAVEL PELAS IMAGENS DO SECTION TERCEIRA PARTE DO SITE*/
     width: 80%;
-    
 }
+    /*
+.skills-wrapper {
+    display: flex;
+    background-color: cyan;
+}
+.skill {
+    width: 200px;
+    height: 200px;
+    box-shadow:  5px 5px 20px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+.skill:not(:last-child) {margin-right: 3rem;}
+
+.skill ::before{
+    content:"";
+    position: absolute;
+    width: 80%; 
+    height:80%;
+    border-radius: 50%;
+    background-color: #131313;
+    box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.3), inset  -5px -5px 20px;
+
+}*/
 
  
 

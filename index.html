@@ -4,56 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./css/styles.css">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
-    <title>IT Solutions</title>
+    <title>Document</title>
 </head>
-<body> 
+<body>
     <header class="header-container">
+       <div id="menu-bar">
+        <div id="menu" onclick="onClickMenu()">
+            <div id="bar1" class="bar"></div>
+            <div id="bar2" class="bar"></div>
+            <div id="bar3" class="bar"></div>
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="#">ínicio</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+            <li><a href="#">Habilidades</a></li>
+            <li><a href="#">Projetos</a></li>
+        </ul>
+       </div>
+
+       <div class="menu-bg" id="menu-bg"></div>
+
+
         <div class="header">
-            <input id="menu-hamburguer" type="checkbox" />
-
-            <label for="menu-hamburguer">
-              <div class="menu">
-                <span class="hamburguer"></span>
-              </div>
-            </label>
-            <ul>
-                <li><a href="#">Ínicio</a></li>
-                <li><a href="#">Sobre Mim</a></li>
-                <li><a href="#">Projetos</a></li>
-                <li><a href="#">Habilidades</a></li>
-                <li><a href="#">Certificados</a></li>
-              </ul>
-        <div class="inicio">
-             <h1>Eliseu Saints</h1> 
-             <h2>Front-End Developer</h2>
-        </div>            
+               
+         <h1>Eliseu Saints</h1>
+         <h2>Front-End Developer</h2>
+         <div class="social-media">
+            <a id="sociais" href="#">Linkedin</a>
+            <a id="sociais" href="#">GitHub</a>
         </div>
-        <div class="redes-sociais">
-            <a href="https://www.linkedin.com/in/eliseu-santos-/" target="_blank">Linkedin</a>
-
-            <a href="https://github.com/EliseuSaints" target="_blank">GitHub</a>
+            
         </div>
+
     </header>
-
-        <div class="about">
-            <h2>Sobre Mim</h2>
-            <p>Sou Desenvolvedor Júnior em formação, estudo atualmente as tecnologias HTML5, CSS3 e Java Script com o objetivo de me tornar um desenvolvedor Full-Stack.
-                Também estudo inglês diariamente de forma autodidata e tenho me aprimorado constantemente através de cursos e projetos que realizo com a finalidade de aprender cada vez mais e usar minhas habilidades de programação para criar solucões</p>
+    <section>
+        <div class="about-container">
+            <h3>Sobre Mim</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, nobis harum culpa mollitia veniam animi deleniti, suscipit rem impedit similique velit neque labore iusto accusantium natus quidem? Cupiditate, doloribus eaque!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dicta laborum quae maiores fuga temporibus obcaecati quo id! Iste saepe praesentium voluptatibus dicta in? Iste voluptatibus quos cumque placeat doloremque!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quas eos maiores quasi ad sequi delectus, voluptates, nesciunt reprehenderit saepe fuga commodi minus illum, dignissimos asperiores laudantium explicabo ducimus inventore?
+            </p>
         </div>
-
-    <main class="container">
-
-    </main>
-    <footer class="footer"></footer>
-
-   
+    </section>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/texto.js"></script>
 </body>
 </html>

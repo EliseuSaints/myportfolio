@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
 
 
  body {
@@ -25,45 +26,51 @@
   padding: 0 112px;
   position: relative;
 }
-
+                     /*PARTE DO TEXTO DOS TEXTOS SOBRE MIM*/
 h1 {
   font-size: 50px;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-top: 1rem;
   font-family: 'Abel', sans-serif;
+  margin-left: 16rem;
 }
 
 h2 {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-top: 2rem;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family:  sans-serif;
+  margin-left: 16rem;
+  
 }
-
+                            /*PARTE ADAPTADA DO TEXTO PRINCIPAL SOBRE MIM*/
 .social-media {
   margin-top: 3rem;
   display: flex;
+  margin-left: 8rem;
 }
 
 .social-media a {
   text-decoration: none;
   color: white;
   padding: 1rem 4rem;
-  border: 1px solid white;
+  border: 1px solid black;
   min-height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: .5s ease-in-out;
   font-size: 25px;
+  font-family: 'Alumni Sans Pinstripe', sans-serif;
+
  
 }
 
 #sociais:hover {
   background-color: black;
 }
-
+                       /*CODIGO DO MENU BOLHA*/
 #menu {
   width: 40px;
   height: 35px;
@@ -91,8 +98,11 @@ h2 {
 }
 
 .nav li a {
-  color: black;
+  color: red;
   text-decoration: none;
+  font-size: 30px;
+  
+
 }
 
 .nav li a:hover {
@@ -122,7 +132,7 @@ h2 {
   width: 0;
   height: 0;
   margin: 30px 0 20px 20px;
-  background: radial-gradient(circle, blue, rgb(128, 6, 128));
+  background: radial-gradient(circle, black,black);
   border-radius: 50%;
   transition: 0.3s ease;
 }
@@ -147,7 +157,7 @@ h2 {
  }
 
  .change #bar3 {
-  transform: translateY(-6px) rotate(45deg); 
+  transform: translateY(-5px) rotate(45deg); 
  }
 
  .change #bar2 {
@@ -157,19 +167,87 @@ h2 {
  .change {
   display: block;
  }
- 
+                             /*O CODIGO ABAIXO CORRESPONDE A GALERIA DE FOTOS QUE SERÃO OS PROJETOS*/
+ .gallery {
+  width: 98vw;
+  height: 98vh;
+  display: flex;
+  gap: 5px;
+ }
+
+ .gallery img {
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s;
+ }
+
+ .gallery img:hover {
+  flex: 4;
+ }
+
+/*.projects-container {
+  box-sizing: border-box;
+  background-color: aquamarine;
+  margin-left: 50rem;
+  height: 100vh ;
+  width: 50vw;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: scroll;
+  padding: 24px;
+  width: 300px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 94px;
+  border-radius: 8px;
+  gap: 12px;
+}
+
+.projects-container .item {
+  flex: 0 0 100%;
+  padding: 24px;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}*/
 
 
- .reveal {
+   /*.shadowbtn {
+  width: 800px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
   position: relative;
-  transform: translateY(144px);
-  opacity: 0;
-  transition: 1s all ease;
- }
- 
- .reveal.active {
-  transform: translateY(0);
-  opacity: 1;
- }
+}
+
+.shadowbtn:hover {
+  background-color: white;
+  color: black;
+  transition: 1s ease;
+}
+.shadowbtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em)
+  rotateX(40deg) scale(1,0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+  .shadowbtn:hover::before {
+  background: white;
+  top: 110px;
+}
+}*/
 
 

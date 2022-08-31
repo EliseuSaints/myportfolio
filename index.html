@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header-container">
+    <header class="header-container" id="sobre">
        <div id="menu-bar">
         <div id="menu" onclick="onClickMenu()">
             <div id="bar1" class="bar"></div>
@@ -16,9 +16,9 @@
             <div id="bar3" class="bar"></div>
         </div>
         <ul class="nav" id="nav">
-            <li><a href="header-1">Sobre Mim</a></li>
-            <li><a href="gallery">Projetos</a></li>
-            <li><a href="#">Habilidades</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href=""></a></li>
         </ul>
        </div>
        
@@ -27,8 +27,8 @@
         <div class="header">
          <h1>Eliseu Saints</h1>
          <h2>Front-End Developer</h2>
-         <div class="social-media">
-            <a id="sociais" href="#"> Sou Desenvolvedor Júnior em formação, estudo atualmente <br> as tecnologias HTML5, CSS3 e Java Script com o objetivo <br>de me tornar um desenvolvedor Full-Stack.
+         <div class="about-container">
+            <a id="about" href="#"> Sou Desenvolvedor Júnior em formação, estudo atualmente <br> as tecnologias HTML5, CSS3 e Java Script com o objetivo <br>de me tornar um desenvolvedor Full-Stack.
                 Também estudo <br> inglês e francês diariamente de forma autodidata. <br> Tenho me aprimorado constantemente através de cursos e <br> projetos que realizo afim de aprender cada vez mais e usar <br> minhas habilidades de programação para encontrar soluções inovadoras.</a>
 
                                                       <!--O CODIGO ABAIXO CORRESPONDE AO BOTAO ILUMINADAO-->
@@ -39,15 +39,40 @@
         </div> 
     </section>
     </header>
-                                                  <!--O CODIGO ABAIXO CORRESPONDE A GALERIA DE FOTOS QUE SERÃO OS PROJETOS-->
-    <div class="gallery">
+
+    <section id="projects">
+       <button class="shadowbtn">
+        Projetos
+       </button>
+
+       <div class="gallery">
         <img src="./img/cabeçadegrego.jpg">
         <img src="./img/cidadedenoite.jpg">
         <img src="./img/castle-4261029.jpg">
         <img src="./img/gregopensando.jpg">
         <img src="./img/guerreiroecavalo.jpg">
     </div>
-                                             <!--O CODIGO ABAIXO CORRESPONDE AO TEXTO COM SCROLL LATERAL-->
+    </section>
+     
+
+
+                                                  <!--O CODIGO ABAIXO CORRESPONDE A GALERIA 
+                                                    DE FOTOS QUE SERÃO OS PROJETOS-->
+
+    <!--<section class="projetos" id="projects">
+        <div class="gallery">
+            <img src="./img/cabeçadegrego.jpg">
+            <img src="./img/cidadedenoite.jpg">
+            <img src="./img/castle-4261029.jpg">
+            <img src="./img/gregopensando.jpg">
+            <img src="./img/guerreiroecavalo.jpg">
+        </div>
+    </section>-->           
+
+
+
+  
+                                             <!--O CODIGO ABAIXO CORRESPONDE AO TEXTO COM SCROLL LATERAL QUE SERIA DOS PROJETOS-->
     <!--<div class="projects-container">
         <div class="item">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium veritatis error harum officia quos nemo modi, veniam iusto. Tenetur ipsum alias quis labore est voluptatum dicta veritatis reiciendis consequatur libero!

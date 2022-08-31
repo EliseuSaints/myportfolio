@@ -45,13 +45,13 @@ h2 {
   
 }
                             /*PARTE ADAPTADA DO TEXTO PRINCIPAL SOBRE MIM*/
-.social-media {
+.about-container {
   margin-top: 3rem;
   display: flex;
   margin-left: 8rem;
 }
 
-.social-media a {
+.about-container a {
   text-decoration: none;
   color: white;
   padding: 1rem 4rem;
@@ -67,7 +67,7 @@ h2 {
  
 }
 
-#sociais:hover {
+#about:hover {
   background-color: black;
 }
                        /*CODIGO DO MENU BOLHA*/
@@ -76,6 +76,7 @@ h2 {
   height: 35px;
   margin: 30px 0 20px 20px;
   cursor: pointer;
+
 }
 
 
@@ -101,8 +102,6 @@ h2 {
   color: red;
   text-decoration: none;
   font-size: 30px;
-  
-
 }
 
 .nav li a:hover {
@@ -124,7 +123,7 @@ h2 {
 .menu-bg, #menu-bar {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
 }
 
 .menu-bg {
@@ -167,10 +166,62 @@ h2 {
  .change {
   display: block;
  }
-                             /*O CODIGO ABAIXO CORRESPONDE A GALERIA DE FOTOS QUE SERÃO OS PROJETOS*/
+                            
+                        
+                                           /*O CODIGO ABAIXO CORRESPONDE AO BOTÃO DA ÁREA DE PROJETOS*/
+#projects {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.shadowbtn {
+  width: 300px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-left: 30rem;
+  top: 40px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-transform: uppercase;
+}
+
+.shadowbtn:hover {
+  background-color: white;
+  color: black;
+  transition: 1s ease;
+}
+
+.shadowbtn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+}
+
+.shadowbtn:hover::before {
+  background: white;
+  top: 70px;
+}
+
+                            /*O CODIGO ABAIXO CORRESPONDE A GALERIA DE PROJETOS*/
+                         
  .gallery {
-  width: 98vw;
-  height: 98vh;
+  margin-left: 12rem;
+  margin-top: 8rem;
+  width: 75vw;
+  height: 65vh;
   display: flex;
   gap: 5px;
  }
@@ -188,6 +239,7 @@ h2 {
  .gallery img:hover {
   flex: 4;
  }
+                             /*O CODIGO CORRESPONDE A GALERIA DE FOTOS QUE SERÃO  OS PROJETOS*/
 
 /*.projects-container {
   box-sizing: border-box;
@@ -214,40 +266,3 @@ h2 {
   border-radius: 8px;
   scroll-snap-align: start;
 }*/
-
-
-   /*.shadowbtn {
-  width: 800px;
-  height: 200px;
-  border: 2px solid white;
-  border-radius: 10px;
-  background-color: transparent;
-  color: white;
-  cursor: pointer;
-  position: relative;
-}
-
-.shadowbtn:hover {
-  background-color: white;
-  color: black;
-  transition: 1s ease;
-}
-.shadowbtn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50px;
-  background: transparent;
-  height: 50%;
-  width: 100%;
-  transform: perspective(1em)
-  rotateX(40deg) scale(1,0.35);
-  filter: blur(8px);
-  transition: 1s ease;
-  .shadowbtn:hover::before {
-  background: white;
-  top: 110px;
-}
-}*/
-
-

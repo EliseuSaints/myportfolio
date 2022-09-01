@@ -29,26 +29,70 @@
                      /*PARTE DO TEXTO DOS TEXTOS SOBRE MIM*/
 h1 {
   font-size: 50px;
-  text-transform: uppercase;
   letter-spacing: 4px;
-  margin-top: 1rem;
   font-family: 'Abel', sans-serif;
-  margin-left: 16rem;
+  margin-left: 10rem;
+  margin-top: 22rem;
 }
 
-h2 {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin-top: 2rem;
-  font-family:  sans-serif;
-  margin-left: 16rem;
-  
+.me {
+  display: flex;
+}
+
+.me .dynamic-txts{
+  margin-left: 110px;
+  margin-top: 2px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li{
+  list-style: none;
+  color: green;
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+  position: relative;
+  top:0 ;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 191%;
+  width: 120%;
+  background: silver;
+  border-left: 1px solid black;
+  animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+  40%, 60% {
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
 }
                             /*PARTE ADAPTADA DO TEXTO PRINCIPAL SOBRE MIM*/
 .about-container {
-  margin-top: 3rem;
   display: flex;
   margin-left: 8rem;
+ 
 }
 
 .about-container a {
@@ -57,14 +101,13 @@ h2 {
   padding: 1rem 4rem;
   border: 1px solid black;
   min-height: 4rem;
+  margin-bottom: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: .5s ease-in-out;
-  font-size: 25px;
+  font-size: 30px;
   font-family: 'Alumni Sans Pinstripe', sans-serif;
-
- 
 }
 
 #about:hover {
@@ -78,7 +121,6 @@ h2 {
   cursor: pointer;
 
 }
-
 
 
 .bar {
@@ -218,10 +260,10 @@ h2 {
                             /*O CODIGO ABAIXO CORRESPONDE A GALERIA DE PROJETOS*/
                          
  .gallery {
-  margin-left: 12rem;
-  margin-top: 8rem;
-  width: 75vw;
-  height: 65vh;
+  margin-left: 8rem;
+  margin-top: 6rem;
+  width: 85vw;
+  height: 70vh;
   display: flex;
   gap: 5px;
  }
@@ -239,6 +281,11 @@ h2 {
  .gallery img:hover {
   flex: 4;
  }
+
+                   /*O CODIGO CORRESPONDE A ANIMAÇÃO DA GALERIA*/
+
+
+
                              /*O CODIGO CORRESPONDE A GALERIA DE FOTOS QUE SERÃO  OS PROJETOS*/
 
 /*.projects-container {

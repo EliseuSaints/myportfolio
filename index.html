@@ -5,66 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Document</title>
+    <title>Meu Portifólio</title>
 </head>
-<body>
-    <header class="header-container" id="sobre">
-       <div id="menu-bar">
-        <div id="menu" onclick="onClickMenu()">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-        </div>
-        <ul class="nav" id="nav">
-            <li><a href="#sobre">Sobre Mim</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="">Habilidades</a></li>
-        </ul>
-       </div>
+<body>        <!--Cabeçalho da Página-->
+    <header class="header">
+        <a href="/" class="logo">Eliseu Saints</a>
+        <nav class="nav">
+          <button
+            class="btn-menu"
+            aria-label="Abrir Menu"
+            aria-haspopup="true"
+            aria-controls="menu"
+            aria-expanded="false"
+          >
+            Menu<span class="hamburger"></span>
+          </button>
+          <!-- <input type="checkbox" id="checkbox" class="checkbox" />
+          <label for="checkbox" class="label-menu"
+            >Menu<span class="hamburger"></span
+          ></label> -->
+          <ul class="menu" id="menu" role="menu">
+            <li><a href="/">Sobre Mim</a></li>
+            <li><a href="/">Projetos</a></li>
+            <li><a href="/">Habilidades</a></li>
+            <li><a href="/">Certificados</a></li>
+            <li><a href="/">Contatos</a></li>
+          </ul>
+        </nav>
+      </header>
        
-       <div class="menu-bg" id="menu-bg"></div>
-       <section id="header-1">
-        <div class="header">
-         <h1>Eliseu Saints</h1>
-
-         <div class="about-container">
-            <a id="about" href="#"> Sou Desenvolvedor Júnior em formação, estudo atualmente <br> as tecnologias HTML5, CSS3 e Java Script com o objetivo <br>de me tornar um desenvolvedor Full-Stack.
-                Também estudo <br> inglês e francês diariamente de forma autodidata. <br> Tenho me aprimorado constantemente através de cursos e <br> projetos que realizo afim de aprender cada vez mais e usar <br> minhas habilidades de programação para encontrar soluções inovadoras.</a>
-        </div>
-        </div> 
-    </section>
-    </header>
-
-    <section id="projects">
-       <button class="shadowbtn">
-        Projetos
-       </button>
-
-       <div class="gallery">
-        <img src="./img/construindo.icone.png">
-        <img src="./img/construindo.icone.png">
-        <img src="./img/construindo.icone.png">
-        <img src="./img/construindo.icone.png">
-        <img src="./img/construindo.icone.png">
-        
-    </div>
-    </section>
-
-    <section id="habilidades">
-        <button class="shadowbtn-2">
-            Habilidades
-           </button>
-        <div class="main-container">
-            <div class="pacman">
-                
+      <section id="about">
+        <div class="sobre-mim">
+            <div class="eu">
+                <img src="./img/minhafoto2.jpg" width="100%">
             </div>
-            <div class="caminho"></div>
+            <h1>Eliseu Santos</h1>
+            <div class="text-about">
+                <p> Sou Desenvolvedor Júnior em formação, estudo atualmente as tecnologias HTML5, CSS3 e Java Script com o objetivo de me tornar um desenvolvedor Full-Stack.
+                    Também estudo inglês e francês diariamente de forma autodidata. Tenho me aprimorado constantemente através de cursos e projetos que realizo e tenho por finalidade aprender cada vez mais e usar minhas habilidades de programação para encontrar soluções inovadoras que gerem impacto positivo não só no na comunidade Dev mas também no mundo.</p>
+            </div>
         </div>
-    </section>
-
-    
-       
+      </section>
+                                    
+ <section id="projects">
+    <button class="shadowbtn">
+         Projetos
+     </button>
+                                             
+ <div class="gallery">
+     <img src="./img/cabeçadegrego.jpg">
+     <img src="./img/gregoolhaproalto.jpg">
+     <img src="./img/Ego2.gif">
+     <img src="./img/grecialua.jpg">
+     <img src="./img/cidadedenoite.jpg">
+                                                     
+ </div>
+</section>
+                                             
+ <section id="habilidades">
+      <button class="shadowbtn-2">
+           Habilidades
+      </button>
+<div class="main-container">
+     <div class="pacman">
+      each n in Array(8)
+  </div>
+       <div class="caminho"></div>
+  </div>
+  </section>
+    <footer></footer>
     <script type="text/javascript" src="./js/menu.js"></script>
-   
 </body>
 </html>

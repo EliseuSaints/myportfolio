@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Gayathri&display=swap');
 
   body {
   margin: 0;
@@ -59,80 +61,82 @@ color: var(--white);
   border-radius: 0.5rem;
   }
             
-            .menu a:hover {
-              background: var(--royal-blue-dark);
-            }
+.menu a:hover {
+   background: var(--royal-blue-dark);
+   }
             
-            .btn-menu {
-              display: none;
-            }
+.btn-menu {
+  display: none;
+}
             
-            @media (max-width: 600px) {
-              .menu {
-                display: block;
-                position: absolute;
-                top: 4.6875rem;
-                left: 0;
-                background: var(--royal-blue-light);
-                text-align: center;
-                width: 100%;
-                height: 0;
-                z-index: 1;
-                visibility: hidden;
-                overflow-y: hidden;
-                transition: 0.5s;
-              }
-              .menu a {
-                padding: 1rem 0;
-                margin-inline: 1rem;
-                border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
-                border-radius: 0;
-              }
-              .btn-menu {
-                background: none;
-                border: none;
-                font: inherit;
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                color: var(--white);
-                padding: 1rem 0;
-                cursor: pointer;
-              }
-              .hamburger {
-                border-top: 0.125rem solid;
-                width: 1.25rem;
-              }
-              .hamburger::after,
-              .hamburger::before {
-                content: " ";
-                display: block;
-                width: 1.25rem;
-                height: 0.125rem;
-                background: currentColor;
-                margin-top: 0.3125rem;
-                position: relative;
-                transition: 0.3s;
-              }
-              .nav.active .menu {
-                height: calc(100vh - 4.6875rem);
-                visibility: visible;
-                overflow-y: auto;
-              }
-              .nav.active .hamburger {
-                border-top-color: transparent;
-              }
-              .nav.active .hamburger::before {
-                transform: rotate(135deg);
-              }
-              .nav.active .hamburger::after {
-                transform: rotate(-135deg);
-                top: -0.4375rem;
-              }
-            }            
+ @media (max-width: 600px) {
+  .menu {
+   display: block;
+   position: absolute;
+   top: 4.6875rem;
+   left: 0;
+   background: var(--royal-blue-light);
+   text-align: center;
+   width: 100%;
+   height: 0;
+   z-index: 1;
+   visibility: hidden;
+   overflow-y: hidden;
+   transition: 0.5s;
+ }
+ .menu a {
+  padding: 1rem 0;
+  margin-inline: 1rem;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+}
+.btn-menu {
+ background: none;
+ border: none;
+ font: inherit;
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ color: var(--white);
+ padding: 1rem 0;
+ cursor: pointer;
+ }
+ .hamburger {
+  border-top: 0.125rem solid;
+  width: 1.25rem;
+}
+.hamburger::after,
+.hamburger::before {
+  content: " ";
+  display: block;
+  width: 1.25rem;
+  height: 0.125rem;
+  background: currentColor;
+  margin-top: 0.3125rem;
+  position: relative;
+  transition: 0.3s;
+}
+.nav.active .menu {
+  height: calc(100vh - 4.6875rem);
+  visibility: visible;
+  overflow-y: auto;
+}
+.nav.active .hamburger {
+  border-top-color: transparent;
+}
+.nav.active .hamburger::before {
+  transform: rotate(135deg);
+}
+.nav.active .hamburger::after {
+  transform: rotate(-135deg);
+  top: -0.4375rem;
+}
+}            
+               
 
                             
                                            /*O CODIGO ABAIXO CORRESPONDE A ÁREA ABOUT*/
+                                         
 .sobre-mim{
  background-color: black; 
  max-width: 1200px;
@@ -141,17 +145,133 @@ color: var(--white);
  align-items: center;
  margin: 0 auto;
 }
+.eu {
+  display: block;
+
+  width: 50%;
+}
+
 
 .eu img {
   width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;  
 }
 
-h1, p {
-  color: white;
+.estatico {
+  display: flex;
 }
 
-           
-                                           /*O CODIGO ABAIXO CORRESPONDE A ÁREA DE PROJETOS*/
+.estatico, .static-txt {
+  color: red;
+  font-size:40px;
+  font-weight: 400;
+  font-family: 'Gayathri', cursive;
+}
+
+.estatico, .txt-dinamico {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.txt-dinamico li {
+  list-style: none;
+  color: #16f37d;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.txt-dinamico li span {
+  position: relative;
+  margin: 2.5px 0;
+  line-height: 40px;
+}
+
+.txt-dinamico li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  background: black;
+  border-left: 1px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.caixa-txt-about {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgb(0, 0, 0, 0.75 );
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.caixa-txt-about::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+  animation: animate 4s linear infinite;
+  animation-delay: 2s;
+}
+
+.caixa-txt-about::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.caixa-txt-about span {
+  position: absolute;
+  inset: 5px;
+  border-radius: 16px;
+  background: black;
+  z-index: 1;
+  text-align: center;
+}
+p {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+                                                      /*O CODIGO ABAIXO CORRESPONDE A ÁREA DE PROJETOS*/
 #projects {
   max-width: 1200px;
   display: flex;

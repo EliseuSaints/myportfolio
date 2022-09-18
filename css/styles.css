@@ -1,412 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Gayathri&display=swap');
-
-  body {
+* {
   margin: 0;
   padding: 0;
-  background-color: black;
- }
-
-
-            /*CODIGO DO MENU BOLHA*/
-:root {
-font-size: 16px;
---royal-blue-light: rgb(3, 28, 61);
---royal-blue-dark: purple;
---white: white;
---backgroud: white;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
 }
-            
-* {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- }
-            
-            
-            
-            
-a {
-color: var(--white);
- text-decoration: none;
+
+html {
+  scroll-behavior: smooth;
 }
-            
-.header {
+
+body {
+  background-color: #0bbb8f;
+  display: flex;
+  justify-content: center;
+}
+/*Essa parte corresponde a barra de rolagem lateral e de baixo*/
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(143, 16, 16); 
+}
+
+main {
+  width: 1120px;
+}
+
+/*Essa parte corresponde ao header*/
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--royal-blue-light);
-  height: 4.6875rem;
-  padding: 1rem;
+  padding: 5px 20px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: #fcfbff;
+  box-shadow: 0 1px 0 #ececec;
+  max-width: 1120px;
+  width: 100%;
 }
-            
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+
+.nav-list {
+  display: flex;
+  gap: 30px;
 }
-            
-.menu {
- list-style: none;
- display: flex;
- gap: 0.5rem;
- }
-            
-.menu a {
-  display: block;
-  padding: 1rem;
-  border-radius: 0.5rem;
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+/*Essa parte corresponde a minha imagem flutuante*/
+.home-img {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 300px;
+  height: 300px;
+  animation: float 5s ease-in-out infinite;
+  box-shadow: 0 10px 10px;
+  border-radius: 50%;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-            
-.menu a:hover {
-   background: var(--royal-blue-dark);
-   }
-            
-.btn-menu {
-  display: none;
+  50% {
+    transform: translateY(-30px);
+  }
 }
-            
- @media (max-width: 600px) {
-  .menu {
-   display: block;
-   position: absolute;
-   top: 4.6875rem;
-   left: 0;
-   background: var(--royal-blue-light);
-   text-align: center;
-   width: 100%;
-   height: 0;
-   z-index: 1;
-   visibility: hidden;
-   overflow-y: hidden;
-   transition: 0.5s;
- }
- .menu a {
-  padding: 1rem 0;
-  margin-inline: 1rem;
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
-  border-radius: 0;
+/*Essa parte corresponde a area dos projetos*/
+section#projects {
+  height: calc(100vh + 80px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
-.btn-menu {
- background: none;
- border: none;
- font: inherit;
- display: flex;
- align-items: center;
- gap: 0.5rem;
- color: var(--white);
- padding: 1rem 0;
- cursor: pointer;
- }
- .hamburger {
-  border-top: 0.125rem solid;
-  width: 1.25rem;
-}
-.hamburger::after,
-.hamburger::before {
-  content: " ";
-  display: block;
-  width: 1.25rem;
-  height: 0.125rem;
-  background: currentColor;
-  margin-top: 0.3125rem;
-  position: relative;
-  transition: 0.3s;
-}
-.nav.active .menu {
-  height: calc(100vh - 4.6875rem);
-  visibility: visible;
-  overflow-y: auto;
-}
-.nav.active .hamburger {
-  border-top-color: transparent;
-}
-.nav.active .hamburger::before {
-  transform: rotate(135deg);
-}
-.nav.active .hamburger::after {
-  transform: rotate(-135deg);
-  top: -0.4375rem;
-}
-}            
-               
 
-                            
-                                           /*O CODIGO ABAIXO CORRESPONDE A ÁREA ABOUT*/
-                                         
-.sobre-mim{
- background-color: black; 
- max-width: 1200px;
- display: flex;
- flex-direction: column;
- align-items: center;
- margin: 0 auto;
-}
-.eu {
-  display: block;
-
+.project-img {
   width: 50%;
 }
 
+.project-img img {
+  box-shadow: 0 1px 2px #0003;
+  object-fit: cover;
+  width: 80%;
+}
 
-.eu img {
-  width: 100%;
-  height: 60vh;
+.project-info {
+  width: 50%;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
+  text-align: start;
 }
 
-.estatico {
-  display: flex;
+.swiper {
+  width: 95vw;
+  height: 500px;
 }
 
-.estatico, .static-txt {
-  color: red;
-  font-size:40px;
-  font-weight: 400;
-  font-family: 'Gayathri', cursive;
-}
-
-.estatico, .txt-dinamico {
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
-}
-
-.txt-dinamico li {
-  list-style: none;
-  color: #16f37d;
-  font-size: 30px;
-  font-weight: 500;
-  position: relative;
-  top: 0;
-  animation: slide 12s steps(4) infinite;
-}
-@keyframes slide {
-  100% {
-    top: -360px;
-  }
-}
-
-.txt-dinamico li span {
-  position: relative;
-  margin: 2.5px 0;
-  line-height: 40px;
-}
-
-.txt-dinamico li span::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  height: 80px;
-  width: 100%;
-  background: black;
-  border-left: 1px solid white;
-  animation: typing 3s steps(10) infinite;
-}
-@keyframes typing {
-  40%, 60%{
-    left: calc(100% + 30px);
-  }
-  100% {
-    left: 0;
-  }
-}
-
-.caixa-txt-about {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  background: rgb(0, 0, 0, 0.75 );
-  border-radius: 20px;
+.swiper-slide {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-}
-.caixa-txt-about::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
-  animation: animate 4s linear infinite;
-  animation-delay: 2s;
+  padding: 0 30px;
 }
 
-.caixa-txt-about::before {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
-  animation: animate 4s linear infinite;
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #7700ff;
 }
-@keyframes animate{
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.caixa-txt-about span {
-  position: absolute;
-  inset: 5px;
-  border-radius: 16px;
-  background: black;
-  z-index: 1;
-  text-align: center;
-}
-p {
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  font-size: 20px;
+
+.swiper-pagination-bullet-active {
+  background-color: #7700ff ;
 }
 
 
 
-                                                      /*O CODIGO ABAIXO CORRESPONDE A ÁREA DE PROJETOS*/
-#projects {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 100%;
-  height: 100vh;
-  padding: 10px;
-  background-color: black;
-}
 
- 
-.shadowbtn {
-  max-width: 300px;
-  width: 600px;
-  object-fit: contain;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 10px;
-  background-color: transparent;
-  margin: 0 auto;
-  top: 40px;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  font-size: 120%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-transform: uppercase;
-}
-
-.shadowbtn:hover {
-  background-color: white;
-  color: black;
-  transition: 1s ease;
-}
-
-.shadowbtn::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50px;
-  background: transparent;
-  height: 50%;
-  width: 100%;
-  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
-  filter: blur(8px);
-  transition: 1s ease;
-}
-
-.shadowbtn:hover::before {
-  background: white;
-  top: 70px;
-}
-
-
-                            /*O CODIGO ABAIXO CORRESPONDE A GALERIA DE PROJETOS*/
-                         
- .gallery {
-  margin-top: 6rem;
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  gap: 5px;
- }
-
- .gallery img {
-  height: 100%;
-  width: 100%;
-  flex: 1;
-  object-fit: cover;
-  overflow: hidden;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s;
- }
-
- .gallery img:hover {
-  flex: 4;
- }
-
- 
-                                   /*O CODIGO ABAIXO CORRESPONDE A SESSÃO DE HABILIDADES*/
-  .shadowbtn-2 {
-  max-width: 300px;
-  width: 600px;
-  object-fit: contain;
-  height: 60px;
-  border: 2px solid white;
-  border-radius: 10px;
-  background-color: transparent;
-  margin: 0 auto;
-  top: 40px;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  font-size: 120%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-transform: uppercase;
- }
-                                  
-.shadowbtn-2:hover {
-  background-color: white;
-  color: black;
-  transition: 1s ease;
-}
-                                  
-.shadowbtn-2::before {
- content: "";
- position: absolute;
- left: 0;
- top: 50px;
- background: transparent;
- height: 50%;
- width: 100%;
- transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
- filter: blur(8px);
- transition: 1s ease;
-}
-                                  
-.shadowbtn-2:hover::before {
- background: white;
- top: 70px;
- }
-
- #habilidades {
-  max-width: 1200px;
-  height: 100vh;
-  width: 100vw;
-  background: black;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- }
-.skills img {
-  margin-top: 80px;
-  float: left;
-}

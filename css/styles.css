@@ -1,78 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+/*ESSA PARTE CORRESPONDE A AREA DO HEADER*/
 html {
   scroll-behavior: smooth;
 }
-
 body {
-  background-color: #0bbb8f;
-  display: flex;
-  justify-content: center;
-}
-/*Essa parte corresponde a barra de rolagem lateral e de baixo*/
-
-body::-webkit-scrollbar {
-  width: 6px;
-}
-body::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: rgb(143, 16, 16); 
-}
-
-main {
-  width: 1120px;
-}
-
-/*Essa parte corresponde ao header*/
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 20px;
-  height: 80px;
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  background-color: #fcfbff;
-  box-shadow: 0 1px 0 #ececec;
-  max-width: 1120px;
-  width: 100%;
-}
-
-.nav-list {
-  display: flex;
-  gap: 30px;
+  background-color: silver;
 }
 
 a {
-  cursor: pointer;
+  color: white;
   text-decoration: none;
-  color: black;
+  transition: 0.3s;
 }
-/*Essa parte corresponde a minha imagem flutuante*/
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+/*ESSA PARTE CORRESPONDE AO MENU*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: rgb(0, 15, 3);
+  height: 8vh;
+  z-index: 999;
+  
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  z-index: 999;
+  
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+  
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+/*ESSA PARTE CORRESPONDE A AREA DE RESPONSIVIDADE DO MENU*/
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*ESSE CODIGO CORRESPONDE A PARTE DO SHOWCASE*/
+
+.showcase-container {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+#info-sobremim {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: justify;
+}
+
+/*ESSE CODIGO CORRESPONDE A MINHA FOTO*/
 .home-img {
-  width: 30%;
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .home-img img {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   animation: float 5s ease-in-out infinite;
   box-shadow: 0 10px 10px;
   border-radius: 50%;
-}
+  color: #16f37d;
 
+}
+/*ESSE CODIGO CORRESPONDE A FLUTUACAO DA MINHA FOTO*/
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -81,54 +168,75 @@ a {
     transform: translateY(-30px);
   }
 }
-/*Essa parte corresponde a area dos projetos*/
-section#projects {
-  height: calc(100vh + 80px);
+
+/*ESSE CODIGO CORRESPONDE AO TEXTO ESTATICO*/
+.estatico {
+  display: flex;
+}
+
+.estatico, .static-txt {
+  color: whitesmoke;
+  font-size:40px;
+  font-weight: 400;
+  font-family: 'Gayathri', cursive;
+}
+
+.estatico, .txt-dinamico {
+  font-family: 'Poppins', sans-serif;
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.txt-dinamico li {
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  color: #16f37d;
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+/*ESSE CODIGO CORRESPONDE A ANIMACAO DO TEXTO ESTATICO*/
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.txt-dinamico li span {
+  position: relative;
+  margin: 2.5px 0;
+  line-height: 40px;
+}
+
+.txt-dinamico li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 80px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
+  background: black;
+  border-left: 1px solid white;
+  animation: typing 3s steps(10) infinite;
 }
 
-.project-img {
-  width: 50%;
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
 }
 
-.project-img img {
-  box-shadow: 0 1px 2px #0003;
-  object-fit: cover;
-  width: 80%;
-}
-
-.project-info {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-}
-
-.swiper {
-  width: 95vw;
-  height: 500px;
-}
-
-.swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 30px;
-}
-
-.swiper-button-next, 
-.swiper-button-prev {
-  color: #7700ff;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #7700ff ;
+h2 {
+  color:white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
 }
 
 

@@ -34,29 +34,24 @@ nav {
   justify-content: space-around;
   align-items: center;
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-  background: rgb(0, 15, 3);
+  background: #23232e;
   height: 8vh;
-  z-index: 999;
-  
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   z-index: 999;
-  
 }
 
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
-  
 }
 
 .mobile-menu {
   display: none;
   cursor: pointer;
-  
 }
 
 .mobile-menu div {
@@ -143,21 +138,17 @@ nav {
 
 /*ESSE CODIGO CORRESPONDE A MINHA FOTO*/
 .home-img {
-  width: 50%;
-  display: flex;
+  width: 80%;
   align-items: center;
   justify-content: center;
-  
 }
 
 .home-img img {
-  width: 400px;
-  height: 400px;
+  max-width: 50%;
   animation: float 5s ease-in-out infinite;
   box-shadow: 0 10px 10px;
   border-radius: 50%;
-  color: #16f37d;
-
+  color: chartreuse;
 }
 /*ESSE CODIGO CORRESPONDE A FLUTUACAO DA MINHA FOTO*/
 @keyframes float {

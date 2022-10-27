@@ -31,7 +31,7 @@ body {
   left: 15px;
   transition: 0.5s ease-in-out;
 }
-
+ /*ESSA AREA CORRESPONDE AO ABRIR E FECHAR DO MENU*/
 .hamburguer:before,
 .hamburguer:after {
   background: black;
@@ -220,12 +220,43 @@ h2 {
 }
 .projects{
   height: 100vh;
-  background: radial-gradient(rgb(7, 95, 61),black);
+  background-color:rgb(0, 8, 0);
 }
-#botaoprojects{
-  color: pink;
-  position: re;
+.botaoprojetos{
+  width: 120px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-left: 44%;
 }
+.botaoprojetos:hover{
+  background-color: white;
+  color: black;
+  transition: 1s ease;
+}
+.botaoprojetos::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em)
+  rotateX(40deg) scale(1, 0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+}
+.botaoprojetos:hover::before{
+  background: white;
+  top: 70px;
+}
+
+ /*ESSA AREA CORRESPONDE A RESPONSIVIDADE DO SITE*/
 @media screen and (max-width: 720px){
   .showcase-container{
     height: 100vh;

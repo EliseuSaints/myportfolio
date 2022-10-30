@@ -4,6 +4,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 /*ESSA PARTE CORRESPONDE A AREA DO HEADER*/
 html {
@@ -13,13 +14,14 @@ body {
   background-color: black;
 }
 .menu {
-  background: #fff;
+  background: white;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   position: fixed;
   top: 25px;
   left: 25px;
+  z-index: 2;
 }
 .hamburguer {
   position: relative;
@@ -95,7 +97,6 @@ input:checked ~ ul {
   opacity: 0;
   transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
   z-index: 2;
-  
   visibility: hidden;
 }
  ul li a{
@@ -105,9 +106,6 @@ input:checked ~ ul {
   text-decoration: none;
   overflow: hidden;
 }
-.welcome h2 {
-  width: 100%;
-}
 .showcase-container {
   background-color: black;
   height: 100vh;
@@ -116,6 +114,17 @@ input:checked ~ ul {
   justify-content: space-around;
   padding: 5px 20px;
   z-index: 2;
+}
+.welcome h1 {
+  width: 100%;
+  color: white;
+  font-family: 'Anton', sans-serif;
+  font-size: 125px;
+}
+.meunome h2{
+  color: silver;
+  font-size: 80px;
+  width: 100%;
 }
 /*ESSE CODIGO CORRESPONDE A MINHA FOTO*/
 .home-img {
@@ -148,14 +157,6 @@ input:checked ~ ul {
 .estatico {
   display: flex;
 }
-
-.estatico, .static-txt {
-  color: whitesmoke;
-  font-size:40px;
-  font-weight: 400;
-  font-family: 'Gayathri', cursive;
-}
-
 .estatico, .txt-dinamico {
   font-family: 'Poppins', sans-serif;
   margin-left: 15px;
@@ -207,11 +208,15 @@ input:checked ~ ul {
     left: 0;
   }
 }
-
-h2 {
-  color:white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 50px;
+.sobre-mim{
+  height: 100vh;
+  width: 100%;
+  background-color: yellow;
+}
+.meutexto {
+  color: sienna;
+  display: grid;
+  font-size: 30px;
 }
 .projects{
   height: 100vh;
@@ -252,45 +257,54 @@ h2 {
   top: 70px;
 }
 .galeria-projetos{
-  margin: 50px;
-  width: 90vw;
-  height: 80vmin;
   display: flex;
-  gap: 5px;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 80vh;
+  background: rgb(0, 10, 4);
+  margin-top: 35px;
 }
-.galeria-projetos img{
-  height: 100%;
+.box-galeria{
+  width: 100%;
   flex: 1;
-  object-fit: cover;
   overflow: hidden;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 10px 20px #16f37d;
+  line-height: 0;
 }
-.galeria-projetos img:hover{
-  flex: 4;
+.box-galeria > img{
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5;
 }
-
+.box-galeria > span{
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  color: white;
+}
+.box-galeria:hover{flex: 1 1 50%;}
+.box-galeria:hover > img{
+  width: 100%;
+}
  /*ESSA AREA CORRESPONDE A RESPONSIVIDADE DO SITE*/
 @media screen and (max-width: 720px){
   .showcase-container{
     height: 100vh;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    
+    align-items: center;
   }
   .info-sobremim{
     display: grid;
-    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
-  }
-  .welcome h2 {
-    font-size: 10vw;
-  }
-  .eusou h2 {
-    font-size: 8vw;
+    height: 50%;
   }
   .home-img{
     width: 100%;
@@ -298,22 +312,83 @@ h2 {
     margin-top: 90px;
   }
   .home-img img{
-    width: 80%;
-    height: 80%;
+    width: 70%;
+    height: 60%;
   }
   
-  .welcome h2{
+  .welcome h1{
+    font-size: 10vw;
     text-align: center;
     align-items: center;
     width: 100%;
     margin-top: 8rem;
   }
-
+  .meunome h2{
+    color: brown;
+    font-size: 5vw;
+    width: 100%;
+    text-align: center;
+  }
   li span {
     width: 100%;
   }
-
+  .projects{
+    height: 100vh;
+    width: 100%;
+  }
+  .botaoprojetos{
+    font-size: 100%;
+    width: 40%;
+   background-color: sienna;
+  }
+  /*ESSA PARTE CORRESPONDE A BARRA ONDE TODO O TEXTO ESTATICO FICA */
+  .estatico, .txt-dinamico {
+    display: block;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 3px;
+    height: 80px; /*CORRESPONDE A ALTURA DA BARRA DE EXIBIÇÃO DO TEXTO*/
+    line-height: 20px;
+  }
   
+  .txt-dinamico li {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+  }
+  .txt-dinamico li span {
+    color: #16f37d;
+    font-size: 5vw;
+    width: 100%;
+    position: relative;
+    margin: 0.5px 0;
+    line-height: 90px;
+  }
+  
+  .txt-dinamico li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background: black;
+    border-left: 5px solid white;
+    animation: typing 3s steps(10) infinite;
+  }
+  
+  @keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100% {
+      left: 0;
+    }
+  }
 }
 
 

@@ -151,7 +151,6 @@ input:checked ~ ul {
   }
 }
 .home-img {
-  background-color: aqua;
   width: 20%;
   height: 10%;
   display: flex;

@@ -115,16 +115,18 @@ input:checked ~ ul {
   justify-content: space-around;
   align-items: center;
 }
-.texto-de-apresentacao{
+.texto-de-apresentacao {
   position: relative;
-  color: #fff;
-  font-size: 3vw;
+  color: rgb(255, 0, 179);
+  font-size: max(40px, 1vw);
 }
 .palavrassomem{
   display: inline;
   margin-left: 10px;
 }
 .palavrassomem span{
+  font-size: max(40px, 1vw);
+  color: powderblue;
   width: max-content;
   position: absolute;
   background-color: burlywood;
@@ -257,35 +259,19 @@ input:checked ~ ul {
 @media screen and (max-width: 720px){
   .showcase-container{
     height: 100vh;
+    width: 100%;
     display: grid;
     flex-direction: column;
     align-items: center;
   }
- 
+  
   .home-img{
     width: 100%;
     height: 100%;
-    margin-top: 90px;
   }
   .home-img img{
-    width: 70%;
-    height: 60%;
-  }
-  .bemvindo{
     width: 100%;
-    height: 70px;
-    background-color: rgb(157, 190, 124);
-  }
-  .texto-de-apresentacao{
-    font-size: 20px;
-  }
-  .palavrassomem{
-    font-size: 20px;
-    width: 90%;
-  }
-  li span {
-    width: 100%;
-  }
+  } 
   .projects{
     height: 100vh;
     width: 100%;
@@ -299,53 +285,5 @@ input:checked ~ ul {
     font-size: 100%;
     width: 40%;
    background-color: sienna;
-  }
-  /*ESSA PARTE CORRESPONDE A BARRA ONDE TODO O TEXTO ESTATICO FICA */
-  .estatico, .txt-dinamico {
-    display: block;
-    background-color: black;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 3px;
-    height: 80px; /*CORRESPONDE A ALTURA DA BARRA DE EXIBIÇÃO DO TEXTO*/
-    line-height: 20px;
-  }
-  
-  .txt-dinamico li {
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    list-style: none;
-    font-size: 40px;
-    font-weight: 300;
-    position: relative;
-    top: 0;
-    animation: slide 12s steps(4) infinite;
-  }
-  .txt-dinamico li span {
-    color: #16f37d;
-    font-size: 5vw;
-    width: 100%;
-    position: relative;
-    margin: 0.5px 0;
-    line-height: 90px;
-  }
-  
-  .txt-dinamico li span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 70px;
-    width: 100%;
-    background: black;
-    border-left: 5px solid white;
-    animation: typing 3s steps(10) infinite;
-  }
-  
-  @keyframes typing {
-    40%, 60%{
-      left: calc(100% + 30px);
-    }
-    100% {
-      left: 0;
-    }
   }
 }

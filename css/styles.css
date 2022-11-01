@@ -5,6 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
 
 /*ESSA PARTE CORRESPONDE A AREA DO HEADER*/
 html {
@@ -109,48 +110,24 @@ input:checked ~ ul {
 .showcase-container {
   background-color: black;
   height: 100vh;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-around;
   padding: 5px 20px;
   z-index: 2;
 }
 .welcome h1 {
-  width: 100%;
+  float: right;
+  width: 60%;
   color: white;
   font-family: 'Anton', sans-serif;
-  font-size: 125px;
+  font-size: 20px;
+  margin-right: 300px;
 }
 .meunome h2{
   color: silver;
-  font-size: 80px;
-  width: 100%;
-}
-/*ESSE CODIGO CORRESPONDE A MINHA FOTO*/
-.home-img {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-img img {
-  width: 350px;
-  height: 350px;
-  animation: float 5s ease-in-out infinite;
-  box-shadow: 0 10px 10px;
-  border-radius: 50%;
-  color: #16f37d;
-}
-/*ESSE CODIGO CORRESPONDE A FLUTUACAO DA MINHA FOTO*/
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-  }
+  font-size: 10px;
+  width: 10%;
 }
 
 /*ESSE CODIGO CORRESPONDE AO TEXTO ESTATICO*/
@@ -209,14 +186,107 @@ input:checked ~ ul {
   }
 }
 .sobre-mim{
+  display: inline-block;
   height: 100vh;
   width: 100%;
-  background-color: yellow;
+  background-color: #989898;
 }
-.meutexto {
-  color: sienna;
-  display: grid;
+/*ESSE CODIGO CORRESPONDE A MINHA FOTO*/
+.home-img {
+  width: 10%;
+  height: 5%;
+  float: right;
+  margin-left: 300px;
+  margin-bottom: 150px;
+}
+
+.home-img img {
+  width: 380px;
+  height: 280px;
+  animation: float 5s ease-in-out infinite;
+  box-shadow: 0 10px 10px;
+  border-radius: 50%;
+  color: #16f37d;
+}
+/*ESSE CODIGO CORRESPONDE A FLUTUACAO DA MINHA FOTO*/
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+.container-card{
+  display: flex;
+}
+.card{
+  position: relative;
+  left: 69%;
+  bottom: 200px;
+  width: 400px;
+  height: 550px;
+  border-radius: 15px;
+  background-color: rgb(51, 46, 46);
+  box-shadow: rgba(1, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.imagem-do-card{
+  display: flex;
+  justify-content: center;
+}
+.grego{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+.titulo-sobremim h3{
+  color: white;
+  text-align: center;
+  padding: 30px;
   font-size: 30px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; 
+}
+.texto-sobremim {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+ }
+.botaosobremim{
+  width: 220px;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-left: 43%;
+  
+}
+.botaosobremim:hover{
+  background-color: white;
+  color: black;
+  transition: 1s ease;
+}
+.botaosobremim::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background: transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em)
+  rotateX(40deg) scale(1, 0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+}
+.botaosobremim:hover::before{
+  background: white;
+  top: 70px;
 }
 .projects{
   height: 100vh;
@@ -255,42 +325,6 @@ input:checked ~ ul {
 .botaoprojetos:hover::before{
   background: white;
   top: 70px;
-}
-.galeria-projetos{
-  display: flex;
-  width: 100%;
-  padding: 4% 2%;
-  box-sizing: border-box;
-  height: 80vh;
-  background: rgb(0, 10, 4);
-  margin-top: 35px;
-}
-.box-galeria{
-  width: 100%;
-  flex: 1;
-  overflow: hidden;
-  transition: .5s;
-  margin: 0 2%;
-  box-shadow: 0 10px 20px #16f37d;
-  line-height: 0;
-}
-.box-galeria > img{
-  width: 200%;
-  height: calc(100% - 10vh);
-  object-fit: cover;
-  transition: .5;
-}
-.box-galeria > span{
-  font-size: 3.8vh;
-  display: block;
-  text-align: center;
-  height: 10vh;
-  line-height: 2.6;
-  color: white;
-}
-.box-galeria:hover{flex: 1 1 50%;}
-.box-galeria:hover > img{
-  width: 100%;
 }
  /*ESSA AREA CORRESPONDE A RESPONSIVIDADE DO SITE*/
 @media screen and (max-width: 720px){
@@ -337,6 +371,11 @@ input:checked ~ ul {
     width: 100%;
   }
   .botaoprojetos{
+    font-size: 100%;
+    width: 40%;
+   background-color: sienna;
+  }
+  .botaosobremim{
     font-size: 100%;
     width: 40%;
    background-color: sienna;

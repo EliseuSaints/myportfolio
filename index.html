@@ -5,50 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Meu Portfolio</title>
 </head>
 <body>
-  <header>
-    <input id="menu-hamburguer" type="checkbox" />
-
-    <label for="menu-hamburguer">
-      <div class="menu">
-        <span class="hamburguer"></span>
-      </div>
-    </label>
-    <ul class="opcoes-menu">
-      <li><a href="#showcase-container">Ínico</a></li>
-      <li><a href="#">Projetos</a></li>
-      <li><a href="#">Sobre Mim</a></li>
-    </ul>
-  </header>
-
   <section class="showcase-container">
-      <div class="bemvindo">
-        <h1 class="texto-de-apresentacao">
-          Olá, Seja Bem Vindo! <br>
-          Meu nome é Eliseu Santos
-          <div class="palavrassomem">
-            <span style="--d: 0s">Dev.Júnior</span>
-            <span style="--d: 4s">Estudante</span>
-            <span style="--d: 8s">Sonhador</span>
+    <div class="tela-inicio">
+      <header>
+        <nav>
+          <a class="logo" href="/">Eliseu Santos</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
           </div>
-        </h1>
+          <ul class="nav-list">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Habilidades</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="minha-foto">
+        <img src="./img/minhafoto2.jpg" alt="">
       </div>
-      <div class="home-img">
-        <img src="./img/minhafoto2 - Copia.jpg" alt="Foto de perfil">
-      </div>
-  </section>
-
-  <section class="sobre-mim">
-    <button class="botaosobremim">Sobre Mim</button>
-  </section>
-
-  <section class="projects">
-    <button class="botaoprojetos">PROJETOS</button>
-    <div class="galeria-projetos">
     </div>
   </section>
+  <script src="./js/mobile-navbar.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>

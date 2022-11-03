@@ -19,6 +19,12 @@ body{
   min-height: 100vh;
   background-color: #080808;
 }
+.apresentacao{
+  padding-top: 200px;
+}
+.apresentacao.texto-apresentacao{
+  margin-bottom: 880px;
+}
 .minha-foto{
   width: 100%;
   height: 100%;

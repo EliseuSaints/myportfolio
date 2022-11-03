@@ -9,49 +9,6 @@
 body{
   overflow-x: hidden;
 }
-.tela-inicio{
-  width: 1200px;
-  max-width: 95%;
-}
-.showcase-container{
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  background-color: #080808;
-}
-.apresentacao{
-  padding-top: 200px;
-}
-.apresentacao.texto-apresentacao{
-  margin-bottom: 880px;
-}
-.minha-foto{
-  width: 100%;
-  height: 100%;
-}
-.minha-foto img{
-  width: 35%;
-  height: 30%;
-  border-radius: 50%;
-  float: right;
-  margin-top: 100px;
-}
-.logo {
-  font-size: 24px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  opacity: 0.7;
-}
-
 .logo {
   font-size: 24px;
   text-transform: uppercase;
@@ -90,8 +47,99 @@ nav {
   margin: 8px;
   transition: 0.3s;
 }
+.showcase-container{
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #080808;
+}
+.tela-inicio{
+  width: 1200px;
+  max-width: 95%;
+}
 
-@media (max-width: 999px) {
+.apresentacao{
+  margin-left: 33px;
+  padding-top: 220px;
+  width: 60%;
+  background-color: red;
+}
+.texto-apresentacao{
+  background-color: rgb(131, 61, 88);
+}
+.texto-apresentacao h1{
+  color: rgb(0, 255, 200);
+  font-size: 30px;
+}
+.texto-apresentacao h3{
+  color: green;
+  padding: 3px;
+}
+.texto-apresentacao h2{
+  color: rgb(255, 117, 19);
+  margin: 10px 1px 10px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.texto-apresentacao h2 span{
+  color: yellow;
+}
+.texto-apresentacao p{
+  color: paleturquoise;
+  margin: 5px;
+}
+.redes-sociais a{
+  margin: 10px;
+  color: navy;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-bottom: 20px;
+  background-color: #71718b;
+}
+.redes-sociais a:hover{
+  transform: scale(3.3);
+  background-color: red;
+  transition: .4s;
+}
+.minha-foto{
+  width: 85%;
+  height: 80%;
+  margin-left: 150px;
+}
+.minha-foto img{
+  width: 35%;
+  height: 30%;
+  border-radius: 50%;
+  float: right;
+  margin-top: 100px;
+  background-color: red;
+}
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+
+@media (max-width: 880px) {
   body {
     overflow-x: hidden;
   }
@@ -142,4 +190,22 @@ nav {
 
 .mobile-menu.active .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
+}
+@media (max-width: 780px){
+  .tela-inicio{
+    display: grid;
+    flex-direction: column;
+  }
+  .minha-foto{
+    width: 50%;
+    height: 80%;
+    background-color: saddlebrown;
+  }
+  .minha-foto img{
+    width: 100%;
+    height: 100%;
+  }
+  .apresentacao{
+    width: 90%;
+  }
 }

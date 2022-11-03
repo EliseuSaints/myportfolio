@@ -9,8 +9,6 @@
   <title>Meu Portfolio</title>
 </head>
 <body>
-  <section class="showcase-container">
-    <div class="tela-inicio">
       <header>
         <nav>
           <a class="logo" href="/">Eliseu Santos</a>
@@ -27,24 +25,36 @@
           </ul>
         </nav>
       </header>
-      <div class="minha-foto">
-        <img src="./img/minhafoto2.jpg" alt="">
-      </div>
-      <div class="apresentacao">
-        <div class="texto-apresentacao">
-          <h3>Olá, Seja Bem Vindo!</h3>
-          <h1>Eu sou <span>Eliseu Santos</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iusto, ratione aliquam nemo culpa nesciunt ab fugit earum quisquam tempora, fugiat eos.</p>
-          <div class="redes-sociais">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <section class="showcase-container">
+        <div class="tela-inicio">
+          <div class="minha-foto">
+            <img src="./img/minhafoto2.jpg" alt="">
+          </div>
+          <div class="apresentacao">
+            <div class="texto-apresentacao">
+              <h3>Olá, Seja Bem Vindo!</h3>
+              <h1>Meu nome é Eliseu Santos.</h1>
+              <h2>Eu sou <span class="input"></span></h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iusto, ratione aliquam nemo culpa nesciunt ab fugit earum quisquam tempora, fugiat eos.</p>
+              <div class="redes-sociais">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
   <script src="./js/mobile-navbar.js"></script>
-  <script src="./js/script.js"></script>
+  <script type="text/javascript" src="./js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".input",{
+    strings:["Dev. Júnior.","Estudante.","Sonhador."],
+    typeSpeed: 70,
+    backSpeed: 60,
+    loop:true
+});
+  </script>
 </body>
 </html>

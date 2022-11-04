@@ -8,24 +8,24 @@ body{
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
-:root {
+/*:root {
   font-size: 16px;
   --royal-blue-light: #404eed;
   --royal-blue-dark: #3946d4;
   --white: #fff;
   --backgroud: #e2e3e9;
-}
+}*/
 a {
-  color: var(--white);
+  color: white;
   text-decoration: none;
 }
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: var(--royal-blue-light);
-  height: 4.6875rem;
+  justify-content: space-around;
+  background: rgb(0, 10, 10);
+  height: 3.5764rem;
   padding: 1rem;
 }
 
@@ -44,10 +44,11 @@ a {
   display: block;
   padding: 1rem;
   border-radius: 0.5rem;
+  background-color: rgb(0, 10, 10);
 }
 
 .menu a:hover {
-  background: var(--royal-blue-dark);
+  background-color: rgb(112, 212, 12);
 }
 
 .btn-menu {
@@ -82,13 +83,10 @@ a {
 .texto-apresentacao h2 span{
   color: chartreuse;
 }
-.texto-apresentacao p{
-  color: paleturquoise;
-  margin: 5px;
-}
+
 .redes-sociais a{
   margin: 10px;
-  color: white;
+  color: black;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -102,7 +100,7 @@ a {
 }
 .redes-sociais a:hover{
   transform: scale(3.3);
-  background-color: black;
+  background-color: chartreuse;
   transition: .4s;
 }
 .minha-foto{
@@ -125,7 +123,7 @@ a {
     position: absolute;
     top: 4.6875rem;
     left: 0;
-    background: var(--royal-blue-light);
+    background: rgb(1, 31, 31);
     text-align: center;
     width: 100%;
     height: 0;
@@ -137,7 +135,7 @@ a {
   .menu a {
     padding: 1rem 0;
     margin-inline: 1rem;
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    border-bottom: 0.0625rem solid black;
     border-radius: 0;
   }
   .btn-menu {
@@ -147,7 +145,7 @@ a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--white);
+    color: white;
     padding: 1rem 0;
     cursor: pointer;
   }
@@ -167,7 +165,7 @@ a {
     transition: 0.3s;
   }
   .nav.active .menu {
-    height: calc(100vh - 4.6875rem);
+    height: calc(100vh - 3.5764rem);
     visibility: visible;
     overflow-y: auto;
   }
@@ -183,7 +181,8 @@ a {
   }
 }
 @media (max-width: 780px){
-  .tela-inicio{
+  .showcase-container{
+    background-color: gold;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -192,7 +191,6 @@ a {
   }
   .minha-foto{
     margin: auto;
-    background-color: yellow;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,11 +203,6 @@ a {
     margin: auto;
     width: 80vw;
     height: 50vh;
-
-    background-color: red;
-  }
-  .texto-apresentacao{
-    padding-bottom: 888px;
   }
   .texto-apresentacao h3{
     font-size: 4vw;

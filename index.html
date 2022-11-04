@@ -9,22 +9,30 @@
   <title>Meu Portfolio</title>
 </head>
 <body>
-      <header>
-        <nav>
-          <a class="logo" href="/">Eliseu Santos</a>
-          <div class="mobile-menu">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-          <ul class="nav-list">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre Mim</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Habilidades</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header class="header">
+    <a href="/" class="logo">melancias</a>
+    <nav class="nav">
+      <button
+        class="btn-menu"
+        aria-label="Abrir Menu"
+        aria-haspopup="true"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span class="hamburger"></span>
+      </button>
+      <!-- <input type="checkbox" id="checkbox" class="checkbox" />
+      <label for="checkbox" class="label-menu"
+        >Menu<span class="hamburger"></span
+      ></label> -->
+      <ul class="menu" id="menu" role="menu">
+        <li><a href="/">Início</a></li>
+        <li><a href="/">Sobre</a></li>
+        <li><a href="/">Contato</a></li>
+        <li><a href="/">Login</a></li>
+      </ul>
+    </nav>
+  </header>
       <section class="showcase-container">
         <div class="tela-inicio">
           <div class="minha-foto">
@@ -35,7 +43,7 @@
               <h3>Olá, Seja Bem Vindo!</h3>
               <h1>Meu nome é Eliseu Santos.</h1>
               <h2>Eu sou <span class="input"></span></h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iusto, ratione aliquam nemo culpa nesciunt ab fugit earum quisquam tempora, fugiat eos.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas doloribus tempore cumque iste, sit optio, libero nisi inventore hic minus ipsam alias reiciendis corrupti suscipit magni expedita aut animi. Nesciunt!</p>
               <div class="redes-sociais">
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-solid fa-envelope"></i></a>
@@ -44,8 +52,8 @@
             </div>
           </div>
         </div>
-      </section>
-  <script src="./js/mobile-navbar.js"></script>
+      </section>   
+  <script  defer src="./js/mobile-navbar.js"></script>
   <script type="text/javascript" src="./js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>

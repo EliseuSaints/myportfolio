@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <title>Meu Portfolio</title>
 </head>
 <body>
-  <header class="header">
+  <header class="meu-menu" id="menu-menu">
     <a href="/" class="logo">Eliseu Santos</a>
     <nav class="nav">
       <button
@@ -26,14 +27,14 @@
         >Menu<span class="hamburger"></span
       ></label> -->
       <ul class="menu" id="menu" role="menu">
-        <li><a href="/">Início</a></li>
-        <li><a href="/">Sobre Mim</a></li>
-        <li><a href="/">Projetos</a></li>
-        <li><a href="/">Habilidades</a></li>
+        <li><a href="#showcase-container">Ínicio</a></li>
+        <li><a href="#sobre-mim">Sobre Mim</a></li>
+        <li><a href="">Habilidades</a></li>
+        <li><a href="">Projetos</a></li>
       </ul>
     </nav>
   </header>
-      <section class="showcase-container">
+      <section class="showcase-container" id="showcase-container">
         <div class="tela-inicio">
           <div class="minha-foto">
             <img src="./img/minhafoto2.jpg" alt="">
@@ -52,15 +53,21 @@
           </div>
         </div>
       </section> 
-      <section class="sobre-mim">
-        <button class="shadowBtn">Sobre Mim</button>
-        <div class="texto-descricao">
-          <p>Atualmente estou me graduando em Análise e Desenvolvimento de Sistemas e estudo as tecnologias HTML, CSS, Java Script e Linguagem C. <br> Meu objetivo é me tornar um Desenvolvedor Front-End.</p>
+      <section class="sobre-mim" id="sobre-mim">
+        <button class="shadowBtn" data-aos="fade-right">Sobre Mim</button>
+        <div class="card-texto-container">
+          <div class="card-texto-descricao" data-aos="fade-up">
+            <p>Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas, estudo as tecnologias HTML, CSS, Java Script e Linguagem C. <br> Tenho me aprimorado constantemente através de cursos e projetos que realizo. <br> Meu objetivo é atuar na de T.I como Desenvolvedor Front-End e usar minhas habilidades para encontrar soluções inovadoras que gerem impacto positivo no mundo. <br> </p>
+          </div>
         </div>
-      </section>  
+      </section> 
+      <section class="habilidades">
+      </section>
   <script  defer src="./js/mobile-navbar.js"></script>
-  <script type="text/javascript" src="./js/script.js"></script>
+  <script src="./js/script.js"></script>
+  <!--ESSE SCRIPT CORRESPONDE AO TEXTO ESTATICO DO SHOWCASE-->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!--ESSE SCRIPT TAMBÉM CORRESPONDE AO TEXTO ESTATICO FAZENDO O FUNCIONAR-->
   <script>
     var typed = new Typed(".input",{
     strings:["Dev. Júnior.","Estudante.","Sonhador."],
@@ -69,5 +76,12 @@
     loop:true
 });
   </script>
+  <!--ESSES SCRIPTS CORRESPONDEM AO SCROLL DO TEXTO SOBRE MIM FAZENDO O FUNCIONAR-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
 </body>
 </html>

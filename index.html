@@ -41,7 +41,7 @@
     <div class="txt-apresentacao-content">
       <h3>Olá, Seja Bem Vindo!</h3>
       <h1>Meu nome é Eliseu Santos</h1>
-      <h2>Eu sou <span class="input"></span></h2>
+      <h2>Eu sou: <span class="input"></span></h2>
       <div class="redes-sociais">
         <a href="#"><i class="fa-brands fa-github"></i></a>
         <a href="#"><i class="fa-solid fa-envelope"></i></a>
@@ -51,5 +51,16 @@
   </section>
   <script  defer src="./js/mobile-navbar.js"></script>
   <script src="./js/script.js"></script>
+   <!--ESSE SCRIPT CORRESPONDE AO TEXTO ESTATICO DO SHOWCASE-->
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+   <!--ESSE SCRIPT TAMBÉM CORRESPONDE AO TEXTO ESTATICO FAZENDO O FUNCIONAR-->
+   <script>
+     var typed = new Typed(".input",{
+     strings:["Dev. Júnior.","Estudante.","Sonhador."],
+     typeSpeed: 70,
+     backSpeed: 60,
+     loop:true
+ });
+   </script>
 </body>
 </html>

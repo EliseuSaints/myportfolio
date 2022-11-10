@@ -3,12 +3,12 @@
   padding: 0;
 }
 *{
- outline: 3px dotted red;
+ /*outline: 3px dotted red;*/
 }
 /*ESSE CODIGO CORRESPONDE AO MENU*/
 :root {
   font-size: 16px;
-  background: #11101b;
+  background: #000;
   --royal-blue-dark: #3946d4;
   --white: #fff;
   --backgroud: #e2e3e9;
@@ -32,7 +32,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: #11101b;
+  background: #000;
   height: 4.6875rem;
   width: 98%;
   padding: 1rem;
@@ -74,7 +74,7 @@ a {
   align-items: center;
   align-content: center;
   justify-content: space-around;
-  background-color: #161625;
+  background-color: #000;
 }
 .minhafoto-content{
   display: flex;
@@ -132,7 +132,7 @@ a {
 .sobre-mim{
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #040407;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,7 +194,7 @@ a {
   width: 300px;
   height: 460px;
   margin: 6px;
-  background-color: rgb(22, 240, 156);
+  background-color:black;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
@@ -216,27 +216,23 @@ a {
 
 /* Card Body */
 .card-body {
-  background-color: purple;
+  background-color: #11101b;
   height: 200px;
   padding: 15px;
   text-align: center;
   font-family: sans-serif;
 }
-
-.card-local {
-  font-size: 16px;
-  margin: 1px 0;
-}
-
 .card-titulo {
-  font-size: 32px;
+  font-size: 25px;
   margin: 15px 0;
+  color: #F3F3F3;
 }
 
 .card-texto {
-  font-size: 12px;
+  font-size: 20px;
   width: 250px;
   margin: 0 auto;
+  color: teal;
 }
 
 /* Card Footer */
@@ -259,17 +255,17 @@ a {
 .card-1 .card-footer {
   background-color: #2740d1;
 }
-
-.card-1 .card-local {
-  color: #2740d1;
-}
-
 .card-2 .card-footer {
   background-color: #d12761;
 }
 
 .card-2 .card-local {
   color: #d12761;
+}
+.projetos{
+  height: 100vh;
+  width: 100%;
+  background-color: #050508;
 }
 
 /* Animação Hover */

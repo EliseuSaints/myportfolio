@@ -38,12 +38,12 @@
    <!--ESSE CODIGO CORRESPONDE A PRIMEIRA SESSAO DO SITE-->
   <section class="showcase-container" id="showcase-container">
     <div class="minhafoto-content">
-      <img src="./img/minhafoto2 - Copia.jpg" alt="minha-foto">
+      <img src="./img/minhafoto2 - Copia.jpg" alt="minha-foto" data-aos="fade-left">
     </div>
     <div class="txt-apresentacao-content">
-      <h3>Olá, Seja Bem Vindo!</h3>
-      <h1>Meu nome é Eliseu Santos</h1>
-      <h2>Eu sou: <span class="input"></span></h2>
+      <h3 data-aos="fade-down">Olá, Seja Bem Vindo!</h3>
+      <h1 data-aos="fade-right">Meu nome é Eliseu Santos</h1>
+      <h2 data-aos="fade-up">Eu sou: <span class="input"></span></h2>
       <div class="redes-sociais">
         <a href="https://github.com/EliseuSaints"><i class="fa-brands fa-github"></i></a>
         <a href="#"><i class="fa-solid fa-envelope"></i></a>
@@ -54,57 +54,12 @@
   <!--ESSE CODIGO CORRESPONDE A SEGUNDA SESSAO DO SITE-->
   <section class="sobre-mim" id="sobre-mim">
     <button class="shadowBtn">Sobre Mim</button>
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card card-1">
-        <!-- card-header -->
-        <div class="card-header">
-          <img src="./img/grecialua.jpg" class="card-img" />
-        </div>
-        <!-- card-header -->
-
-        <!-- card-body -->
-        <div class="card-body">
-          <h2 class="card-titulo">Texto Sobre Mim</h2>
-          <p class="card-texto">
-            Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas, estudo as tecnologias HTML, CSS, Java Script e Linguagem C. 
-          </p>
-        </div>
-        <!-- card-body -->
-
-        <!-- card-footer -->
-        <div class="card-footer">
-          <a href="#">Ver Mais</a>
-        </div>
-        <!-- card-footer -->
+     <div class="about-me-content">
+      <div class="img-triangulo"><img src="./img/Ego2.gif" data-aos="fade-right"></div>
+      <div class="div-txt">
+        <p  data-aos="fade-left">Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas, estudo as tecnologias HTML, CSS, Java Script e Linguagem C. <br> Me aprimoro constantemente através de cursos e projetos que realizo. <br> Meu objetivo é atuar na de T.I como Desenvolvedor Front-End. <br> </p>
       </div>
-      <!-- Card 1 -->
-
-      <!-- Card 2 -->
-      <div class="card card-2">
-        <!-- card-header -->
-        <div class="card-header">
-          <img src="./img/gregoolhaproalto.jpg" class="card-img" />
-        </div>
-        <!-- card-header -->
-
-        <!-- card-body -->
-        <div class="card-body">
-          <h2 class="card-titulo">Meu Currículo</h2>
-          <p class="card-texto">
-            Clicando no botão abaixo você poderá vizualizar meu <br> currículo com minhas experiências profissionais e minhas informações acadêmicas.
-          </p>
-        </div>
-        <!-- card-body -->
-
-        <!-- card-footer -->
-        <div class="card-footer">
-          <a href="#">Ver Mais</a>
-        </div>
-        <!-- card-footer -->
-      </div>
-      <!-- Card 2 -->
-    </div>
+     </div>
   </section>
   <section class="projetos" id="projetos">
     
@@ -122,5 +77,13 @@
      loop:true
  });
    </script>
+    <!--ESSES SCRIPTS CORRESPONDEM AO SCROLL DO TEXTO SOBRE MIM FAZENDO O FUNCIONAR-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
+
 </body>
 </html>

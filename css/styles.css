@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
 *{
   margin: 0;
   padding: 0;
- /* outline: 3px dotted red;*/
+  /*outline: 3px dotted red;*/
 }
 /*ESSE CODIGO CORRESPONDE AO MENU*/
 :root {
@@ -68,7 +69,7 @@ a {
   align-items: center;
   align-content: center;
   justify-content: space-around;
-  background-color: rgb(12, 13, 14);
+  background-color: rgb(3, 17, 17);
 }
 .minhafoto-content{
   display: flex;
@@ -107,21 +108,22 @@ a {
 }
 .redes-sociais a{
   margin: 10px;
-  color: #5c597a;
-  width: 30px;
-  height: 30px;
+  color: black;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 30px;
   cursor: pointer;
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 20px;
+  margin-left: 32px;
 }
 .redes-sociais a:hover{
   transform: scale(3.3);
-  background-color: white;
+  background-color: chartreuse;
   transition: .4s;
 }
 .sobre-mim{
@@ -198,8 +200,105 @@ a {
 .projetos{
   height: 100vh;
   width: 100%;
-  background-color: #050508;
+  background-color: #07070c;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
+.shadowBtn-projetos{
+  width: 20%;
+  height: 60px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  margin-top: 50px;
+}
+.shadowBtn-projetos:hover{
+  background-color: white;
+  color: black;
+  transition: 1s ease;
+  
+}
+.shadowBtn-projetos::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background:transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em)
+  rotateX(40deg) scale(1, 0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+  
+}
+.shadowBtn-projetos::before{
+  display: none;
+  background: white;
+  top: 70px;
+}
+.card-container{
+  width: 90%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.card-container .card{
+  position: relative;
+  width: 20%;
+  height: 80%;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0,0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+.card-container .card .card-content{
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.8s;
+}
+.card-container .card:hover .card-content{
+  transform: translateY(0px);
+  opacity: 1;
+}
+.card-container .card .card-content h2{
+  position: absolute;
+  top:-80px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+.card-container .card .card-content h3{
+  font-size: 1.8em;
+  color: #fff;
+  z-index: 1;
+}
+.card-container .card .card-content p {
+  font-size: 1vh;
+  font-size: 1.2vw;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 30px;
+  font-family: 'Cairo', sans-serif;
+}
+
 /*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU*/
 @media (max-width: 800px) {
   .menu {
@@ -275,7 +374,6 @@ a {
 /*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DA PRIMEIRA SESSÃO DO SITE*/
 @media (max-width: 800px){
   .showcase-container{
-    background-color: #040407;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -314,5 +412,10 @@ a {
     display: flex;
     height: 100vh;
   }
-  
+  .div-txt{
+    width: 50%;
+  }
+  .div-txt p{
+    font-size:3vw;
+  }
 }

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!--ESSE É O ENDEREÇO DO ARQUIVO Swiper CSS DOS CARDS PROJETOS  -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <title>Meu Portfolio</title>
 </head>
 <body>
@@ -23,10 +25,6 @@
       >
         <span class="hamburger"></span>
       </button>
-      <!-- <input type="checkbox" id="checkbox" class="checkbox" />
-      <label for="checkbox" class="label-menu"
-        >Menu<span class="hamburger"></span
-      ></label> -->
       <ul class="menu" id="menu" role="menu">
         <li><a href="#showcase-container">Início</a></li>
         <li><a href="#sobre-mim">Sobre Mim</a></li>
@@ -51,7 +49,7 @@
       </div>
     </div>
   </section>
-  <!--ESSE CODIGO CORRESPONDE A SEGUNDA SESSAO DO SITE-->
+  <!--ESSE CÓDIGO CORRESPONDE A SEGUNDA SESSÃO DO SITE-->
   <section class="sobre-mim" id="sobre-mim">
     <button class="shadowBtn">SOBRE MIM</button>
      <div class="about-me-content">
@@ -60,39 +58,169 @@
         <p>Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas pela Faculdade de Educação Tecnológica do Estado do Rio de Janeiro. <br> Possuo conhecimento sobre as tecnologias HTML, CSS, Java Script e Linguagem C.<br> Me aprimoro constantemente através de cursos e projetos que realizo. <br> Meu objetivo é atuar na área de T.I como Desenvolvedor Front-End.</p>
       </div>
      </div>
+  <!--ESSE CÓDIGO CORRESPONDE A TERCEIRA SESSÃO DO SITE-->
   </section>
   <section class="projetos" id="projetos">
     <button class="shadowBtn-projetos">PROJETOS</button>
-    <div class="card-container">
-      <div class="card">
-        <div class="card-content">
-          <h2>01</h2>
-          <h3>Projeto Um</h3>
-          <p>Desculpe, estamos em obras! <br> Em Breve você terá acesso aos meus mais novos projetos. <br>
-          Obrigado pela paciência!!!</p>
-        </div>
+  <!--ESSES CÓDIGOS CORRESPONDEM A GALERIA DE PROJETOS DA TERCEIRA SESSÃO DO SITE-->
+    <div class="slide-container swiper">
+      <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                          <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">PROJETO</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">David Dell</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+              <div class="card swiper-slide">
+                  <div class="image-content">
+                      <span class="overlay"></span>
+
+                      <div class="card-image">
+                        <img src="./img/gregopensando.jpg" alt="" class="card-img">
+                      </div>
+                  </div>
+
+                  <div class="card-content">
+                      <h2 class="name">David Dell</h2>
+                      <p class="description">No momento estamos em construção, <br> em breve você poderá acessar os meus mais novos projetos. <br>Obrigado pela compreensão!!!.</p>
+
+                      <button class="button">Em Breve!</button>
+                  </div>
+              </div>
+          </div>
       </div>
-      <div class="card">
-        <div class="card-content">
-          <h2>02</h2>
-          <h3>Projeto Dois</h3>
-          <p>Desculpe, estamos em obras! <br> Em Breve você terá acesso aos meus mais novos projetos. <br>
-            Obrigado pela paciência!!!</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-content">
-          <h2>03</h2>
-          <h3>Projeto Três</h3>
-          <p>Desculpe, estamos em obras! <br> Em Breve você terá acesso aos meus mais novos projetos. <br>
-            Obrigado pela paciência!!!</p>
-        </div>
-      </div>
-    </div>
+
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+  </div>
   </section>
    <!--ESSE SCRIPT CORRESPONDE AO ENDEREÇO JAVASCRIPT DO MENU-->
   <script  defer src="./js/mobile-navbar.js"></script>
-   <!--ESSE SCRIPT CORRESPONDE AO TEXTO ESTATICO DO SHOWCASE-->
+   <!--ESSE SCRIPT CORRESPONDE AO ENDEREÇO DO TEXTO ESTÁTICO NO SHOWCASE-->
    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
    <!--ESSE SCRIPT TAMBÉM CORRESPONDE AO TEXTO ESTATICO DO SHOWCASE FAZENDO O FUNCIONAR-->
    <script>
@@ -103,22 +231,16 @@
      loop:true
  });
    </script>
-    <!--ESSES SCRIPTS CORRESPONDEM A APARIÇÃO DOS TEXTOS DO SHOWCASE FAZENDO O FUNCIONAR-->
+    <!--ESSES SCRIPTS CORRESPONDEM AO EFEITO DE APARIÇÃO DOS TEXTOS DO SHOWCASE FAZENDO O FUNCIONAR-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 2000,
       });
     </script>
-    <!--ESSES SCRIPTS CORRESPONDEM AO EFEITO 3D DOS CARDS PROJETOS FAZENDO FUNCIONAR-->
-    <script src="./js/vanilla-tilt.js"></script>
-    <script>
-      	VanillaTilt.init(document.querySelectorAll(".card"),{
-          max:25,
-          speed:400,
-          glare:true,
-          "max-glare":1, 
-        });
-    </script>
+      <!--ESSE SCRIPT CORRESPONDE AO ARQUIVO Swiper JS (CARDS PROJETOS)-->
+    <script src="js/swiper-bundle.min.js"></script>
+     <!--ESSE SCRIPT CORRESPONDE AO ENDEREÇO DO CÓDIGO DE FUNCIONAMENTO DOS (CARDS PROJETOS)-->
+    <script src="js/script.js"></script>
 </body>
 </html>

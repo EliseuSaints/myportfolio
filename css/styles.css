@@ -91,12 +91,12 @@ a {
 .txt-apresentacao-content h3{
   color: white;
   font-weight: 600;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
 }
 .txt-apresentacao-content h1{
   color: white;
   font-weight: 600;
-  font-size: 3.8vw;
+  font-size: 4.1vw;
 }
 .txt-apresentacao-content h2{
   color: white;
@@ -104,7 +104,7 @@ a {
   font-size: 1.8vw;
 }
 .txt-apresentacao-content h2 span{
-  color: chartreuse;
+  color: black;
 }
 .redes-sociais a{
   margin: 10px;

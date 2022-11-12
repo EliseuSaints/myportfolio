@@ -10,14 +10,13 @@
 /*ESSE CODIGO CORRESPONDE AO MENU*/
 :root {
   font-size: 12px;
-  --white: #fff;
 }
 html{
   scroll-behavior: smooth;
 }
 
 a {
-  color: var(--white);
+  color: black;
   text-decoration: none;
 }
 
@@ -26,7 +25,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: rgb(9, 9, 10);
+  background: whitesmoke;
   height: 4.6875rem;
   width: 98%;
   padding: 1rem;
@@ -52,8 +51,8 @@ a {
 }
 
 .menu a:hover {
-  background: chartreuse;
-  color: black;
+  background: black;
+  color: white;
 }
 
 .btn-menu {
@@ -69,7 +68,7 @@ a {
   align-items: center;
   align-content: center;
   justify-content: space-around;
-  background-color: silver;
+  background-color: whitesmoke;
 }
 .minhafoto-content{
   display: flex;
@@ -78,7 +77,6 @@ a {
   justify-content: center;
   float: right;
   width: 45%;
-  
 }
 .minhafoto-content img{
   border-radius: 50%;
@@ -89,22 +87,23 @@ a {
   width: 50%;
 }
 .txt-apresentacao-content h3{
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 1.4vw;
 }
 .txt-apresentacao-content h1{
-  color: white;
+  color: teal;
   font-weight: 600;
   font-size: 4.1vw;
 }
 .txt-apresentacao-content h2{
-  color: white;
+  color: black;
   font-weight: 600;
   font-size: 1.8vw;
 }
 .txt-apresentacao-content h2 span{
-  color: black;
+  color: turquoise;
+  font-weight: 900;
 }
 .redes-sociais a{
   margin: 10px;
@@ -123,13 +122,13 @@ a {
 }
 .redes-sociais a:hover{
   transform: scale(3.3);
-  background-color: #fff;
+  background-color: white;
   transition: .4s;
 }
 .sobre-mim{
   width: 100%;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,16 +138,16 @@ a {
 .shadowBtn{
   width: 20%;
   height: 60px;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 10px;
   background-color: transparent;
-  color: white;
+  color: black;
   cursor: pointer;
   position: relative;
 }
 .shadowBtn:hover{
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
   transition: 1s ease;
   
 }
@@ -166,11 +165,10 @@ a {
   transition: 1s ease;
   
 }
-.shadowBtn:hover::before{
+/*.shadowBtn:hover::before{
   display: none;
-  background: white;
   top: 70px;
-}
+}*/
 .about-me-content{
   display: flex;
   flex-direction: row;
@@ -184,18 +182,20 @@ a {
   width: 40%;
 }
 .img-triangulo img{
-  width: 95%;
+  width: 100%;
   height: 100%;
 }
 
 .div-txt{
   display: flex;
-  width: 40%;
+  align-items: center;
+  width: 50%;
 }
 .div-txt p{
-  color: white;
+  color: black;
   font-family: 'Open Sans', sans-serif;
-  font-size: 2vw;
+  font-weight: 900;
+  font-size: 15px;
 }
 .projetos{
   height: 100vh;
@@ -306,7 +306,7 @@ a {
     position: absolute;
     top: 4.6875rem;
     left: 0;
-    background: #11101b;
+    background: black;
     text-align: center;
     width: 100%;
     height: 0;
@@ -318,9 +318,9 @@ a {
   .menu a {
     padding: 1rem 0;
     margin-inline: 1rem;
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+    border-bottom: 0.0625rem solid white;
     border-radius: 0;
-   
+    color: #fff;
   }
   .btn-menu {
     background: none;
@@ -329,7 +329,7 @@ a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--white);
+    color: black;
     padding: 1rem 0;
     cursor: pointer;
    
@@ -388,25 +388,17 @@ a {
     height: 20%;
   }
   .txt-apresentacao-content h3{
-    color: white;
-    font-weight: 400;
-    font-size: 2.2vh;
+    font-weight: 600;
+    font-size: 3vh;
     font-size: 4vw;
   }
   .txt-apresentacao-content h1{
-    color: white;
-    font-weight: 600;
-    font-size: 5vh;
+    font-weight: 900;
     font-size: 6vw;
   }
   .txt-apresentacao-content h2{
-    color: white;
-    font-weight: 500;
-    font-size: 2.5vh;
+    font-weight: 600;
     font-size: 4.4vw;
-  }
-  .txt-apresentacao-content h2 span{
-    color: chartreuse;
   }
   .sobre-mim{
     display: flex;

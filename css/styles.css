@@ -8,56 +8,51 @@
  /* outline: 3px dotted red;*/
 }
 /*ESSE CODIGO CORRESPONDE AO MENU*/
-:root {
-  font-size: 12px;
-}
 html{
   scroll-behavior: smooth;
 }
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.header {
-  font-family: 'Ubuntu', sans-serif;
+header{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: whitesmoke;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background: whitesmoke;
-  height: 4.6875rem;
-  width: 98%;
-  padding: 1rem;
-  position: fixed;
+  padding: 0 100px;
+  font-family: 'Ubuntu', sans-serif;
   z-index: 999;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-.menu {
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.menu a {
-  display: block;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-.menu a:hover {
-  background: black;
-  color: white;
-}
-
-.btn-menu {
+.hamburger{
   display: none;
 }
+.nav-bar ul{
+  display: flex;
+  list-style: none;
+}
+.nav-bar ul li a{
+  text-decoration: none;
+  text-decoration: none;
+  display: block;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 5px;
+}
+.nav-bar ul li a:hover{
+  color: #FFF;
+  background: black;
+}
+.nav-bar ul li a.active {
+  color: white;
+  background: black;
+}
+
 /*ESSE CODIGO CORRESPONDE A PRIMEIRA SESSÃO DO SITE*/
 .showcase-container{
   font-family: 'Raleway', sans-serif;
@@ -106,6 +101,8 @@ a {
   font-weight: 900;
 }
 .redes-sociais a{
+  text-decoration: none;
+  list-style: none;
   margin: 10px;
   color: black;
   width: 40px;
@@ -245,7 +242,7 @@ a {
   background: white;
   top: 70px;
 }
-/*ESSES CÓDIGOS CORRESPONDEM AOS CARDS PROJE*/
+/*ESSES CÓDIGOS CORRESPONDEM AOS CARDS PROJETOS*/
 .slide-container{
   max-width: 1120px;
   width: 100%;
@@ -355,14 +352,116 @@ a {
 .swiper-button-prev{
   left: 0;
 }
-/*.swiper-pagination-bullet{
-  background-color: red;
-  opacity: 1;
+/*ESSES CÓDIGOS CORRESPONDEM A QUARTA PARTE DO SITE*/
+.habilidades{
+  height: 100vh;
+  width: 100%;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.swiper-pagination-bullet-active{
-  background-color: yellow;
-}*/
+.shadowBtn-habilidades{
+  width: 20%;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  margin-top: 60px;
+}
+.shadowBtn-habilidades:hover{
+  background-color: black;
+  color: white;
+  transition: 1s ease;
+  
+}
+.shadowBtn-habilidades::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50px;
+  background:transparent;
+  height: 50%;
+  width: 100%;
+  transform: perspective(1em)
+  rotateX(40deg) scale(1, 0.35);
+  filter: blur(8px);
+  transition: 1s ease;
+  
+}
+.shadowBtn-habilidades::before{
+  display: none;
+  background: white;
+  top: 70px;
+}
+.wrapper{
+  width:800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
+}
+.wrapper .card{
+  background: black;
+  width: calc(33% - 20px);
+  height: 300px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  box-shadow: 0px 10px 15px black;
+}
+.wrapper .card .circle{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.card .circle .box{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: all 0.2s;
+}
+.card .circle:hover .box{
+  transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+  background: -webkit-linear-gradient(silver, teal, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.circle .box span{
+  font-size: 38px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transform: translate(-45%, -45%);
+  transition: all 0.1s;
+}
+.card .circle:hover .box span{
+  transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text{
+  font-size: 20px;
+  font-weight: 600;
+}
+/*ESSES CÓDIGOS CORRESPONDEM A RESPONSIVIDADE DOS CARDS PROJETOS*/
 @media screen and (max-width: 768px) {
   .slide-content{
     margin: 0 10px;
@@ -443,7 +542,7 @@ a {
     
   }
 }
-/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DA PRIMEIRA SESSÃO DO SITE*/
+/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DA PRIMEIRA E SEGUNDA SESSÃO DO SITE*/
 @media (max-width: 800px){
   .showcase-container{
     height: 100vh;
@@ -496,5 +595,92 @@ a {
   .img-triangulo img{
     width: 100%;
     height: 60%;
+  }
+  .habilidades{
+    height: 110vh;
+    width: 100%;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU*/
+@media (max-width: 1320px){
+  header{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1100px){
+  header{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 900px){
+  .hamburger{
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger .line{
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 6px 0;
+  }
+  .nav-bar{
+    height: 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: black;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  .nav-bar.active{
+    height: 450px;
+  }
+  .nav-bar ul{
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.8s;
+    opacity: 0;
+  }
+  .nav-bar.active ul{
+    opacity: 1;
+  }
+  .nav-bar ul li a{
+    margin-bottom: 12px;
+    color: white;
+  }
+  .nav-bar ul li a:hover{
+    color: black;
+    background: white;
+  }
+  .nav-bar ul li a.active {
+    color: black;
+    background: white;
+  }
+}
+/*ESSE CÓDIGO CORRESPONDE A RESPONSIVIDADE DOS CARDS HABILIDADES*/
+@media(max-width: 800px){
+  .wrapper{
+    width: 700px;
+  }
+  .wrapper .card{
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+@media(max-width: 750px){
+  .wrapper{
+    max-width: 40%;
+  }
+  .wrapper .card{
+    width: 100%;
   }
 }

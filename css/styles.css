@@ -5,52 +5,104 @@
 *{
   margin: 0;
   padding: 0;
- /* outline: 3px dotted red;*/
+  /*outline: 3px dotted red;*/
 }
 /*ESSE CODIGO CORRESPONDE AO MENU*/
 html{
   scroll-behavior: smooth;
 }
-header{
+nav{
   position: fixed;
-  width: 100%;
-  height: 60px;
-  background-color: whitesmoke;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
-  padding: 0 100px;
-  font-family: 'Ubuntu', sans-serif;
+  align-items: center;
+  background-color: whitesmoke;
+  color: black;
+  width: 100%;
+  height: 40px;
   z-index: 999;
+  padding: 1rem 1rem;
 }
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+	letter-spacing: 5px;
+	padding: 0.5rem 1rem;
+	padding-right: calc(1rem - 5px);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  font-weight: 600;
 }
-.hamburger{
-  display: none;
+
+.menu {
+	display: none;
+	align-items: center;
+	margin: 0 -1rem;
 }
-.nav-bar ul{
-  display: flex;
-  list-style: none;
+
+.menu a {
+	margin: 0 1rem;
+	color: black;
+	text-decoration: none;
+	transition: 0.3s;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
 }
-.nav-bar ul li a{
-  text-decoration: none;
-  text-decoration: none;
-  display: block;
-  color: black;
-  padding: 10px 25px;
-  border-radius: 50px;
-  transition: 0.2s;
-  margin: 0 5px;
+
+.menu a:hover {
+	color: teal;
 }
-.nav-bar ul li a:hover{
-  color: #FFF;
-  background: black;
+
+.hamburger {
+	appearance: none;
+	outline: none;
+	border: none;
+	background: none;
+	cursor: pointer;
+
+	display: block;
+	width: 2rem;
+	height: 2rem;
 }
-.nav-bar ul li a.active {
-  color: white;
-  background: black;
+
+.hamburger span {
+	color: black;
+	font-size: 2rem;
+}
+
+.mobile-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 98;
+  font-family: 'Ubuntu', sans-serif;
+	padding-top: 6rem;
+	opacity: 0;
+	transform: translateY(-100%);
+	background-color: black;
+	color: #FFF;
+	transition: 0.3s;
+}
+
+.mobile-menu.is-open {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.mobile-menu a {
+	display: block;
+	padding: 1rem;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.25rem;
+	transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+	color: black;
+	background-color: #FFF;
 }
 
 /*ESSE CODIGO CORRESPONDE A PRIMEIRA SESSÃO DO SITE*/
@@ -371,7 +423,7 @@ header{
   color: black;
   cursor: pointer;
   position: relative;
-  margin-top: 60px;
+  margin-top: 85px;
 }
 .shadowBtn-habilidades:hover{
   background-color: black;
@@ -398,68 +450,102 @@ header{
   background: white;
   top: 70px;
 }
-.wrapper{
-  width:800px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+.progress-content{
+  list-style: none;
+  width: 90%;
+  height: 55%;
+  background-color: gainsboro;
+  margin: 60px auto;
+  padding: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  font-family: 'Ubuntu', sans-serif;
+}
+.progress-content h1{
+  text-align: center;
+  color: black;
+}
+.progress-content h3{
+  margin: 5px;
+}
+.progress-content li{
+  margin: 20px 0;
+  padding: 5px;
+}
+.bar{
+  background-color: gainsboro;
+  display: block;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1); 
+}
+.bar:hover{
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.bar span{
+  height: 20px;
+  float: left;
+  background: linear-gradient(135deg, rgb(12, 48, 42)0%, rgb(27, 184, 160)100%);
+}
+.html{
+  width: 70%;
+  animation: html 3s;
+}
+.css{
+  width: 70%;
+  animation: css 3s;
+}
+.javascript{
+  width: 10%;
+  animation: javascript 3s;
+}
+.c{
+  width: 10%;
+  animation: c 3s;
+}
+@keyframes html{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+@keyframes css{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+@keyframes javascript{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 10%;
+  }
+}
+@keyframes c{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 10%;
+  }
+}
+/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU DO SITE*/
+@media (min-width: 800px) {
+	.mobile-menu, .hamburger {
+		display: none;
+	}
 
-}
-.wrapper .card{
-  background: black;
-  width: calc(33% - 20px);
-  height: 300px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: column;
-  box-shadow: 0px 10px 15px black;
-}
-.wrapper .card .circle{
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  cursor: default;
-}
-.card .circle .box,
-.card .circle .box span{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-.card .circle .box{
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0.8);
-  transition: all 0.2s;
-}
-.card .circle:hover .box{
-  transform: translate(-50%, -50%) scale(0.91);
-}
-.card .circle .box span,
-.wrapper .card .text{
-  background: -webkit-linear-gradient(silver, teal, white);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.circle .box span{
-  font-size: 38px;
-  font-family: sans-serif;
-  font-weight: 600;
-  transform: translate(-45%, -45%);
-  transition: all 0.1s;
-}
-.card .circle:hover .box span{
-  transform: translate(-45%, -45%) scale(1.09);
-}
-.card .text{
-  font-size: 20px;
-  font-weight: 600;
+	.menu {
+		display: flex;
+	}
 }
 /*ESSES CÓDIGOS CORRESPONDEM A RESPONSIVIDADE DOS CARDS PROJETOS*/
 @media screen and (max-width: 768px) {
@@ -468,78 +554,6 @@ header{
   }
   .swiper-navBtn{
     display: none;
-  }
-}
-/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU*/
-@media (max-width: 800px) {
-  .menu {
-    display: block;
-    position: absolute;
-    top: 4.6875rem;
-    left: 0;
-    background: black;
-    text-align: center;
-    width: 100%;
-    height: 0;
-    z-index: 2;
-    visibility: hidden;
-    overflow-y: hidden;
-    transition: 0.5s;
-  }
-  .menu a {
-    padding: 1rem 0;
-    margin-inline: 1rem;
-    border-bottom: 0.0625rem solid white;
-    border-radius: 0;
-    color: #fff;
-  }
-  .btn-menu {
-    background: none;
-    border: none;
-    font: inherit;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: black;
-    padding: 1rem 0;
-    cursor: pointer;
-   
-  }
-  .hamburger {
-    border-top: 0.125rem solid;
-    width: 1.25rem;
-    
-  }
-  .hamburger::after,
-  .hamburger::before {
-    content: " ";
-    display: block;
-    width: 1.25rem;
-    height: 0.125rem;
-    background: currentColor;
-    margin-top: 0.3125rem;
-    position: relative;
-    transition: 0.3s;
-   
-  }
-  .nav.active .menu {
-    height: calc(100vh - 4.6875rem);
-    visibility: visible;
-    overflow-y: auto;
-
-  }
-  .nav.active .hamburger {
-    border-top-color: transparent;
-   
-  }
-  .nav.active .hamburger::before {
-    transform: rotate(135deg);
-   
-  }
-  .nav.active .hamburger::after {
-    transform: rotate(-135deg);
-    top: -0.4375rem;
-    
   }
 }
 /*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DA PRIMEIRA E SEGUNDA SESSÃO DO SITE*/
@@ -600,70 +614,6 @@ header{
     height: 110vh;
     width: 100%;
     background-color: gainsboro;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-}
-/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU*/
-@media (max-width: 1320px){
-  header{
-    padding: 0 50px;
-  }
-}
-@media (max-width: 1100px){
-  header{
-    padding: 0 30px;
-  }
-}
-@media (max-width: 900px){
-  .hamburger{
-    display: block;
-    cursor: pointer;
-  }
-  .hamburger .line{
-    width: 30px;
-    height: 3px;
-    background: black;
-    margin: 6px 0;
-  }
-  .nav-bar{
-    height: 0;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background: black;
-    transition: 0.5s;
-    overflow: hidden;
-  }
-  .nav-bar.active{
-    height: 450px;
-  }
-  .nav-bar ul{
-    display: block;
-    width: fit-content;
-    margin: 80px auto 0 auto;
-    text-align: center;
-    transition: 0.8s;
-    opacity: 0;
-  }
-  .nav-bar.active ul{
-    opacity: 1;
-  }
-  .nav-bar ul li a{
-    margin-bottom: 12px;
-    color: white;
-  }
-  .nav-bar ul li a:hover{
-    color: black;
-    background: white;
-  }
-  .nav-bar ul li a.active {
-    color: black;
-    background: white;
   }
 }
 /*ESSE CÓDIGO CORRESPONDE A RESPONSIVIDADE DOS CARDS HABILIDADES*/

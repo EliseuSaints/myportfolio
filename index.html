@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--ESSE É O ENDEREÇO DO ARQUIVO DO ICONE HAMBURGER DO MENU-->  
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+     <!--ESSE É O ENDEREÇO DO ARQUIVO DO jquery DO MENU--> 
     <!--ESSE É O ENDEREÇO DO ARQUIVO Swiper CSS DOS CARDS PROJETOS-->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!--ESSE É O ENDEREÇO DOS ARQUIVOS DE FUNCIONAMENTO DOS CARDS HABILIDADES -->
@@ -32,11 +33,11 @@
 				<span class="material-icons">menu</span>
 			</button>
 		</nav>
-		<div class="mobile-menu">
-      <a href="#showcase-container">Ínicio</a>
-				<a href="#sobre-mim">Sobre Mim</a>
-				<a href="#projetos">Projetos</a>
-				<a href="#habilidades">Habilidades</a>
+		<div class="mobile-menu" id="opcoes-menu-mobile">
+      <a href="#showcase-container" class="OpcoesMenu" >Ínicio</a>
+				<a href="#sobre-mim" class="OpcoesMenu">Sobre Mim</a>
+				<a href="#projetos"class="OpcoesMenu">Projetos</a>
+				<a href="#habilidades"class="OpcoesMenu">Habilidades</a>
 		</div>
   </header>
    <!--ESSE CODIGO CORRESPONDE A PRIMEIRA SESSAO DO SITE-->
@@ -57,19 +58,19 @@
   </section>
   <!--ESSE CÓDIGO CORRESPONDE A SEGUNDA SESSÃO DO SITE-->
   <section class="sobre-mim" id="sobre-mim">
-    <button class="shadowBtn">SOBRE MIM</button>
+    <button class="shadowBtn"data-aos="fade-right">SOBRE MIM</button>
      <div class="about-me-content">
-      <div class="img-triangulo"><img src="./img/J53.gif"></div>
+      <div class="img-triangulo" data-aos="fade-up"><img src="./img/J53.gif"></div>
       <div class="div-txt">
-        <p>Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas pela Faculdade de Educação Tecnológica do Estado do Rio de Janeiro. <br> Possuo conhecimento sobre as tecnologias HTML, CSS, Java Script e Linguagem C.<br> Me aprimoro constantemente através de cursos e projetos que realizo. <br> Meu objetivo é atuar na área de T.I como Desenvolvedor Front-End.</p>
+        <p data-aos="fade-up">Tenho 23 anos de idade estou me graduando em Análise e Desenvolvimento de Sistemas pela Faculdade de Educação Tecnológica do Estado do Rio de Janeiro. <br> Possuo conhecimento sobre as tecnologias HTML, CSS, Java Script e Linguagem C.<br> Me aprimoro constantemente através de cursos e projetos que realizo. <br> Meu objetivo é atuar na área de T.I como Desenvolvedor Front-End.</p>
       </div>
      </div>
   <!--ESSE CÓDIGO CORRESPONDE A TERCEIRA SESSÃO DO SITE-->
   </section>
   <section class="projetos" id="projetos">
-    <button class="shadowBtn-projetos">PROJETOS</button>
+    <button class="shadowBtn-projetos"data-aos="fade-right">PROJETOS</button>
     <!--ESSES CÓDIGOS CORRESPONDEM A GALERIA DE PROJETOS DA TERCEIRA SESSÃO DO SITE-->
-      <div class="slide-container swiper">
+      <div class="slide-container swiper"data-aos="fade-up">
         <div class="slide-content">
             <div class="card-wrapper swiper-wrapper">
                 <div class="card swiper-slide">
@@ -247,6 +248,9 @@
       </li>
     </div>
   </section>
+  <script>
+   
+  </script>
    <!--ESSE SCRIPT CORRESPONDE AO ENDEREÇO JAVASCRIPT DO MENU-->
   <script src="./js/mobile-navbar.js"></script>
    <!--ESSE SCRIPT CORRESPONDE AO ENDEREÇO DO TEXTO ESTÁTICO NO SHOWCASE-->
@@ -260,7 +264,7 @@
      loop:true
  });
    </script>
-    <!--ESSES SCRIPTS CORRESPONDEM AO EFEITO DE APARIÇÃO DOS TEXTOS DO SHOWCASE FAZENDO O FUNCIONAR-->
+    <!--ESSES SCRIPTS CORRESPONDEM AO EFEITO DE APARIÇÃO DOS TEXTOS DO SHOWCASE E DA SESSÃO SOBRE MIM FAZENDO O FUNCIONAR-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({

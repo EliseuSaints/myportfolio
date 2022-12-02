@@ -10,6 +10,7 @@ hamburger.addEventListener('click', () => {
 	
 	mobile_menu.classList.toggle('is-open');
 })
+ /*ESSE CÓDIGO CORRESPONDE AO DESAPARECIMENTO DO MENU-MOBILEw*/
 $(".hamburger").click(function() {
 	$(".mobile-menu").show();
   });

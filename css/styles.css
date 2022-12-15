@@ -175,6 +175,7 @@ nav{
   background-color: white;
   transition: .4s;
 }
+/*ESSE CODIGO CORRESPONDE A SEGUNDA SESSÃO DO SITE*/
 .sobre-mim{
   width: 100%;
   height: 100vh;
@@ -183,43 +184,23 @@ nav{
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+ 
 }
-
-.shadowBtn{
-  width: 20%;
-  height: 60px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: transparent;
-  color: black;
-  cursor: pointer;
-  position: relative;
-  margin-top: 70px;
-}
-.shadowBtn:hover{
-  background-color: black;
-  color: white;
-  transition: 1s ease;
-  
-}
-
-/*.shadowBtn:hover::before{
-  display: none;
-  top: 70px;
-}*/
 .about-me-content{
-  width: 95%;
-  height: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 95%;
+  height: 75%;
 }
+
 .txt-especificos{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90%;
-  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
   font-family: 'Ubuntu', sans-serif;
   color: black;
 }
@@ -228,29 +209,33 @@ nav{
   margin: 10px;
 }
 .txt-especificos .txt-1{
-  width: 40%;
-  margin: 10px;
+  width: 70%;
+  height: 60%;
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
+ 
 }
 .txt-especificos .txt-2{
-  width: 40%;
-  margin: 10px;
+  width: 72%;
+  height: 60%;
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
+
 }
 .txt-especificos .txt-3{
-  width: 40%;
-  margin: 10px;
+  width: 72%;
+  height: 60%;
+ 
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
 }
 .txt-especificos .txt-4{
-  width: 40%;
-  margin: 10px;
+  width: 72%;
+  height: 60%;
+
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
@@ -282,6 +267,24 @@ nav{
 .txt-especificos span{
   font-weight: 800;
 }
+.shadowBtn{
+  width: 20%;
+  height: 60px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+  position: relative;
+  margin-top: 70px;
+}
+.shadowBtn:hover{
+  background-color: black;
+  color: white;
+  transition: 1s ease;
+  
+}
+/*ESSE CODIGO CORRESPONDE A TERCEIRA SESSÃO DO SITE*/
 .projetos{
   height: 100vh;
   width: 100%;
@@ -552,7 +555,7 @@ nav{
     display: none;
   }
 }
-/*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DA PRIMEIRA E SEGUNDA SESSÃO DO SITE*/
+/*RESPONSIVIDADE DA PRIMEIRA SESSÃO DO SITE*/
 @media (max-width: 800px){
   .showcase-container{
     height: 100vh;
@@ -581,35 +584,27 @@ nav{
     font-weight: 600;
     font-size: 4.4vw;
   }
+}
+/*RESPONSIVIDADE SEGUNDA SESSÃO DO SITE*/
+@media (max-width: 850px){
   .sobre-mim{
-    
-    height: 300vh;
-  }
-  .about-me-content{
-   
     width: 100%;
-    height: 100%;
+    height: 100rem;
   }
+ 
   .txt-especificos{
-   
     width: 100%;
-    height: 100%;
-    font-size: 4vw;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    align-items: center;
+    font-size: 4vw;   
+    
   }
   .habilidades{
     height: 100vh;
     width: 100%;
   }
-  /*.shadowBtn{
-    display: none;
-  }
-  .shadowBtn-projetos{
-    display: none;
-  }
-  .shadowBtn-habilidades{
-    display: none;
-  }*/
-  
 }
 /*ESSE CÓDIGO CORRESPONDE A RESPONSIVIDADE DOS CARDS HABILIDADES*/
 @media(max-width: 800px){

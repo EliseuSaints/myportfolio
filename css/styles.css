@@ -19,7 +19,7 @@ nav{
   background: whitesmoke;
   color: black;
   width: 100%;
-  height: 40px;
+  height: 30px;
   z-index: 999;
   padding: 1rem 1rem;
 }
@@ -117,6 +117,7 @@ nav{
   align-content: center;
   justify-content: space-around;
   background: whitesmoke;
+  /*background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );*/
 }
 .minhafoto-content{
   display: flex;
@@ -179,19 +180,19 @@ nav{
 .sobre-mim{
   width: 100%;
   height: 100vh;
-  background: whitesmoke;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
- 
+  background-color: whitesmoke;
 }
 .about-me-content{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 95%;
-  height: 75%;
+  height: 70vh;
+  background-color: whitesmoke;
 }
 
 .txt-especificos{
@@ -200,42 +201,37 @@ nav{
   justify-items: center;
   align-items: center;
   width: 100%;
-  height: 90%;
+  height: 95%;
   font-family: 'Ubuntu', sans-serif;
   color: black;
+  background-color: whitesmoke;
 }
 .txt-especificos h1{
   color: teal;
   margin: 10px;
 }
 .txt-especificos .txt-1{
-  width: 70%;
-  height: 60%;
+  width: 25vw;
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
- 
 }
 .txt-especificos .txt-2{
-  width: 72%;
-  height: 60%;
+  width: 25vw;
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
-
+  
 }
 .txt-especificos .txt-3{
-  width: 72%;
-  height: 60%;
- 
+  width: 25vw; 
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
+  
 }
 .txt-especificos .txt-4{
-  width: 72%;
-  height: 60%;
-
+  width: 25vw;
   cursor: pointer;
   border-radius: 1em;
   padding: 20px;
@@ -275,8 +271,6 @@ nav{
   background-color: transparent;
   color: black;
   cursor: pointer;
-  position: relative;
-  margin-top: 70px;
 }
 .shadowBtn:hover{
   background-color: black;
@@ -584,22 +578,49 @@ nav{
     font-weight: 600;
     font-size: 4.4vw;
   }
+ /* .shadowBtn{
+    display: none;
+  }
+  .shadowBtn-projetos{
+    display: none;
+  }
+  .shadowBtn-habilidades{
+    display: none;
+  }*/
 }
 /*RESPONSIVIDADE SEGUNDA SESSÃO DO SITE*/
 @media (max-width: 850px){
   .sobre-mim{
     width: 100%;
-    height: 100rem;
+    height: 140vh;
+  }
+  .about-me-content{
+    width: 100vw;
+    height: 80%;
   }
  
   .txt-especificos{
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    justify-items: center;
-    align-items: center;
-    font-size: 4vw;   
-    
+    gap: 5px;
+  }
+  .txt-especificos .txt-1{
+    width: 60vw;
+    font-size: 3vw;
+  }
+  .txt-especificos .txt-2{
+    width: 60vw;
+    font-size: 3vw;
+  }
+  .txt-especificos .txt-3{
+    width: 60vw;
+    font-size: 3vw;
+  }
+  .txt-especificos .txt-4{
+    width: 60vw;
+    font-size: 3vw;
   }
   .habilidades{
     height: 100vh;

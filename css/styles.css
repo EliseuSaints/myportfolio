@@ -567,6 +567,10 @@ footer{
   align-items: center;
   justify-content: center;
   justify-content: space-evenly;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: teal;
 }
 .redes-sociais-container a{
   text-decoration: none;
@@ -583,11 +587,7 @@ footer{
   cursor: pointer;
   box-shadow: 0 10px 2px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.redes-sociais-container a:hover{
-  transform: scale(3.3);
-  transition: .4s;
-  background-color: white;
-}
+
 .direitos p{
   color: black;
   letter-spacing: 2px;
@@ -596,6 +596,27 @@ footer{
 }
 .direitos span{
   color: teal;
+}
+.git{
+  text-align: center;
+}
+.git:hover{
+  transform: scale(2);
+  transition: .4s;
+}
+.email{
+  text-align: center;
+}
+.email:hover{
+  transform: scale(2);
+  transition: .4s;
+}
+.linkedin{
+  text-align: center;
+}
+.linkedin:hover{
+  transform: scale(2);
+  transition: .4s;
 }
 
 /*ESSE CODIGO CORRESPONDE A RESPONSIVIDADE DO MENU DO SITE*/
